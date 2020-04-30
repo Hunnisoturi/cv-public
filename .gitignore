@@ -8,6 +8,13 @@
 # testing
 /coverage
 
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.env
+*.code-workspace
+
 # production
 /build
 
