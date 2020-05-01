@@ -1,17 +1,43 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { initReactI18next } from 'react-i18next';
+import i18next from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import translationsEN from './translations/en/translation.json';
+import translationsFI from './translations/fi/translation.json';
+import translationCommon from './translations/common.json';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { register } from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
+i18next
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    resources: {
+      en: {
+        translation: {
+          ...translationsEN,
+          ...translationCommon,
+        },
+      },
+      fi: {
+        translation: {
+          ...translationsFI,
+          ...translationCommon,
+        },
+      },
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+render(
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root'),
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+register();
