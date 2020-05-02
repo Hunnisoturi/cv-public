@@ -1,3 +1,6 @@
 {
-  "appbar": "Appbar"
+  "appbar": "Appbar",
+  "home": "Home",
+  "portfolio": "Portfolio",
+  "contact": "Contact"
 }

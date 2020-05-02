@@ -1,16 +1,23 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Trans } from 'react-i18next';
+import styles from '../styles/navbar.module.css';
+
+import pipe from '../assets/Pipe.svg';
 
 const Navbar = () => (
-  <span className="">
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">
-          <Trans i18nKey="appbar" />
-        </Typography>
-      </Toolbar>
-    </AppBar>
+  <span className={styles.menu}>
+    <span>
+      <img alt="" src={pipe} />
+    </span>
+    <span>
+      <Trans i18nKey="home" />
+    </span>
+    <span>
+      <Trans i18nKey="portfolio" />
+    </span>
+    <span>
+      <Trans i18nKey="contact" />
+    </span>
   </span>
 );
 

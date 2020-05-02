@@ -10,6 +10,8 @@ import translationCommon from './translations/common.json';
 import App from './App';
 import { register } from './serviceWorker';
 
+import 'typeface-roboto';
+
 i18next
   .use(initReactI18next)
   .use(LanguageDetector)

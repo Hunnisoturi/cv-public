@@ -1,3 +1,6 @@
 {
-  "appbar": "Appipalkki"
+  "appbar": "Appipalkki",
+  "home": "Etusivu",
+  "portfolio": "Portfolio",
+  "contact": "Yhteystiedot"
 }

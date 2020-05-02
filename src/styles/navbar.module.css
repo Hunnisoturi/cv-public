@@ -1,0 +1,9 @@
+.menu {
+  display: flex;
+  width: 20%;
+  padding-right: 100px;
+  color: #FFFFFF;
+  font-size: xx-large;
+  justify-content: space-between;
+  align-items: center;
+}
