@@ -39,21 +39,21 @@ body {
   width: 405px;
   height: 260px;
   color: #ffffff;
-  font-size: 100px;
+  font-size: 92px;
   z-index: 200;
   position: fixed;
-  top: 225px;
-  left: 185px;
+  top: 14%;
+  left: 7%;
 }
 
 .logo {
   pointer-events: none;
   user-select: none;
-  padding-left: 185px;
+  padding-left: 7%;
 }
 
 .rectangle {
-  padding-left: 350px;
+  padding-left: 12%;
   position: absolute;
   z-index: 200;
 }
