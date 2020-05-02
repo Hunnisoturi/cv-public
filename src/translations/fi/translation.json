@@ -1,6 +1,7 @@
 {
   "appbar": "Appipalkki",
+  "contact": "Yhteystiedot",
+  "copyright": "@ Aapo Attila 2020",
   "home": "Etusivu",
-  "portfolio": "Portfolio",
-  "contact": "Yhteystiedot"
+  "portfolio": "Portfolio"
 }

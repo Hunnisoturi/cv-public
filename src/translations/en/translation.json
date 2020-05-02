@@ -1,6 +1,7 @@
 {
   "appbar": "Appbar",
+  "contact": "Contact",
+  "copyright" : "Copyright Aapo Attila 2020",
   "home": "Home",
-  "portfolio": "Portfolio",
-  "contact": "Contact"
+  "portfolio": "Portfolio"
 }

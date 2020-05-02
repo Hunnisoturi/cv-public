@@ -11,7 +11,7 @@ body {
 .logo {
   pointer-events: none;
   user-select: none;
-  padding-left: 140px;
+  padding-left: 185px;
 }
 
 .appHeader {
@@ -20,4 +20,23 @@ body {
   height: 140px;
   align-items: center;
   justify-content: space-between;
+}
+
+.rectangle {
+  padding-left: 350px;
+  position: absolute;
+}
+
+.appFooter {
+  display: flex;
+  flex-direction: row;
+  background-color: #2D2D2D;
+  width: 100%;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  color: #ffffff;
 }
