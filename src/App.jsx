@@ -17,6 +17,9 @@ const App = () => (
       </span>
       <NavBar />
     </span>
+    <span className={styles.headline}>
+      <Trans i18nKey="headline" />
+    </span>
     <span className={styles.appFooter}>
       <footer>
         <Trans i18nKey="copyright" />

@@ -8,23 +8,17 @@ body {
   font-family: "Roboto";
 }
 
-.logo {
-  pointer-events: none;
-  user-select: none;
-  padding-left: 185px;
-}
-
 .appHeader {
   display: flex;
   flex-direction: row;
-  height: 140px;
+  height: 8rem;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-}
-
-.rectangle {
-  padding-left: 350px;
-  position: absolute;
+  background-color: #2D2D2D;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .appFooter {
@@ -40,3 +34,27 @@ body {
   bottom: 0;
   color: #ffffff;
 }
+
+.headline {
+  width: 405px;
+  height: 260px;
+  color: #ffffff;
+  font-size: 100px;
+  z-index: 200;
+  position: fixed;
+  top: 225px;
+  left: 185px;
+}
+
+.logo {
+  pointer-events: none;
+  user-select: none;
+  padding-left: 185px;
+}
+
+.rectangle {
+  padding-left: 350px;
+  position: absolute;
+  z-index: 200;
+}
+
