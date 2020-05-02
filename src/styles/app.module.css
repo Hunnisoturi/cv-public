@@ -42,7 +42,7 @@ footer {
   width: 100%;
   height: 4rem;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -50,11 +50,13 @@ footer {
 }
 
 .changeLanguage {
+  padding-right: 7%;
   justify-content: center;
 }
 
 .copyright {
- justify-content: end;
+  padding-left: 7%;
+ justify-content: center;
 }
 
 .headline {
