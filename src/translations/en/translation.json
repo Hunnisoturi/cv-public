@@ -1,8 +1,9 @@
 {
   "appbar": "Appbar",
   "contact": "Contact",
-  "copyright" : "Copyright Aapo Attila 2020",
+  "copyright" : "Copyright @ Aapo Attila 2020",
   "headline": "Fetish for Code",
   "home": "Home",
+  "language": "Language",
   "portfolio": "Portfolio"
 }

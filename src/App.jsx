@@ -1,8 +1,8 @@
 import React from 'react';
 import { Trans, withTranslation } from 'react-i18next';
-import NavBar from './components/Navbar';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-import logo from './assets/Logo.svg';
 import rectangleLarge from './assets/RectangleLarge.svg';
 import styles from './styles/app.module.css';
 
@@ -11,20 +11,13 @@ const App = () => (
     <span className={styles.rectangle}>
       <img alt="" src={rectangleLarge} />
     </span>
-    <span className={styles.appHeader}>
-      <span className={styles.logo}>
-        <img alt="logo" src={logo} height={110} />
+    <Header />
+    <span className={styles.appBody}>
+      <span className={styles.headline}>
+        <Trans i18nKey="headline" />
       </span>
-      <NavBar />
     </span>
-    <span className={styles.headline}>
-      <Trans i18nKey="headline" />
-    </span>
-    <span className={styles.appFooter}>
-      <footer>
-        <Trans i18nKey="copyright" />
-      </footer>
-    </span>
+    <Footer />
   </div>
 );
 
