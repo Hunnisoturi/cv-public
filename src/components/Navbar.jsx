@@ -7,7 +7,7 @@ import pipe from '../assets/Pipe.svg';
 const Navbar = () => (
   <span className={styles.menu}>
     <span>
-      <img alt="" src={pipe} />
+      <img alt="" src={pipe} height={65} />
     </span>
     <span>
       <Trans i18nKey="home" />

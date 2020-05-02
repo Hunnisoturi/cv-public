@@ -33,6 +33,10 @@ i18next
     interpolation: {
       escapeValue: false,
     },
+    detection: {
+      order: ['querystring', 'navigator'],
+    },
+    fallbackLng: 'en',
   });
 
 render(
