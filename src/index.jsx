@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { initReactI18next } from 'react-i18next';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import translationsEN from './translations/en/translation.json';
@@ -15,6 +15,7 @@ import 'typeface-roboto';
 
 const theme = createMuiTheme({
   palette: {
+    type: 'dark',
     primary: {
       main: '#EA6227',
     },
