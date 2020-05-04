@@ -4,6 +4,7 @@ import { withTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
+import About from './components/About';
 
 const styles = makeStyles({
   root: {
@@ -16,10 +17,11 @@ const App = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
+      <Header />
       <Container maxWidth="xl">
-        <Header />
         <main>
           <Intro />
+          <About />
         </main>
       </Container>
       <Footer />

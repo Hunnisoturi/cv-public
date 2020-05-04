@@ -8,7 +8,11 @@ const styles = makeStyles({
     color: '#ffffff',
     paddingTop: '100px',
   },
+  multiLine: {
+    whiteSpace: 'pre',
+  },
   description: {
+    display: 'flex',
     alignItems: 'center',
   },
 });
@@ -18,13 +22,13 @@ const Intro = () => {
   return (
     <Container className={classes.introContainer} maxWidth="xl">
       <Grid container>
-        <Grid item md={6}>
-          <Typography className={classes.headline} variant="h1">
+        <Grid item md={8}>
+          <Typography className={classes.multiLine} variant="h1">
             <Trans i18nKey="headline" />
           </Typography>
         </Grid>
-        <Grid item md={6}>
-          <Typography className={classes.description} variant="h6">
+        <Grid item md={4} className={classes.description}>
+          <Typography variant="subtitle1" component="p">
             <Trans i18nKey="introText" />
           </Typography>
         </Grid>
