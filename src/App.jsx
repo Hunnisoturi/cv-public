@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Button, makeStyles } from '@material-ui/core';
+import { Container, makeStyles } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Intro from './components/Intro';
 
 const styles = makeStyles({
   root: {
@@ -13,16 +14,15 @@ const styles = makeStyles({
 
 const App = () => {
   const classes = styles();
-
   return (
     <div className={classes.root}>
-      <Container component="main" maxWidth="xl">
+      <Container maxWidth="xl">
         <Header />
-        <Button color="primary" variant="outlined">
-          WoOO
-        </Button>
-        <Footer />
+        <main>
+          <Intro />
+        </main>
       </Container>
+      <Footer />
     </div>
   );
 };

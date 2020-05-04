@@ -1,19 +1,49 @@
 import React from 'react';
-import { Toolbar } from '@material-ui/core';
+import { Toolbar, Button, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Trans } from 'react-i18next';
 
 import { ReactComponent as Logo } from '../assets/Logo.svg';
+import { ReactComponent as SmallPipe } from '../assets/Pipe.svg';
 
-const classes = makeStyles({
+const styles = makeStyles({
   toolbar: {
     justifyContent: 'space-between',
   },
+  logo: {
+    flexGrow: '1',
+  },
+  navi: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  button: {
+    marginLeft: '16px',
+    marginRight: '16px',
+  },
 });
 
-const Header = () => (
-  <Toolbar className={classes.toolbar}>
-    <Logo />
-  </Toolbar>
-);
+const Header = () => {
+  const classes = styles();
+  return (
+    <header>
+      <Toolbar className={classes.toolbar}>
+        <Logo height={100} />
+        <Box className={classes.navi} component="span">
+          <SmallPipe className={classes.button} />
+          <Button size="large" className={classes.button}>
+            <Trans i18nKey="home" />
+          </Button>
+          <Button size="large" className={classes.button}>
+            <Trans i18nKey="portfolio" />
+          </Button>
+          <Button size="large" className={classes.button}>
+            <Trans i18nKey="contact" />
+          </Button>
+        </Box>
+      </Toolbar>
+    </header>
+  );
+};
 
 export default Header;
