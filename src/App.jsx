@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
 import About from './components/About';
+import Skills from './components/Skills';
 
 const styles = makeStyles({
   root: {
@@ -22,6 +23,7 @@ const App = () => {
         <main>
           <Intro />
           <About />
+          <Skills />
         </main>
       </Container>
       <Footer />

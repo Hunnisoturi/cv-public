@@ -24,7 +24,7 @@ const About = () => {
   return (
     <Container maxWidth="xl" className={classes.container}>
       <Paper className={classes.paper}>
-        <Grid container className={classes.gridContainer} direction="column">
+        <Grid container className={classes.gridContainer} direction="column" spacing={4}>
           <Grid item>
             <Breadcrumbs separator=">" aria-label="breadcrumb">
               <Typography color="textPrimary" variant="h5">
