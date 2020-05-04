@@ -1,18 +1,20 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
-import { Container, Grid, Breadcrumbs, Typography } from '@material-ui/core';
+import { Container, Grid, Breadcrumbs, Typography, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import portrait from '../assets/portrait.jpg';
 
 const styles = makeStyles(theme => ({
   container: {
-    paddingTop: '100px',
+    paddingTop: '150px',
   },
   gridContainer: {
-    width: '40%',
-    background: theme.palette.primary.main,
+    padding: '32px',
     color: '#ffffff',
+  },
+  paper: {
+    width: '30%',
   },
 }));
 
@@ -21,29 +23,31 @@ const About = () => {
 
   return (
     <Container maxWidth="xl" className={classes.container}>
-      <Grid container className={classes.gridContainer} direction="column">
-        <Grid item>
-          <Breadcrumbs separator=">" aria-label="breadcrumb">
-            <Typography color="textPrimary">
-              <Trans i18nKey="name" />
+      <Paper className={classes.paper}>
+        <Grid container className={classes.gridContainer} direction="column">
+          <Grid item>
+            <Breadcrumbs separator=">" aria-label="breadcrumb">
+              <Typography color="textPrimary" variant="h5">
+                <Trans i18nKey="name" />
+              </Typography>
+              <Typography color="textPrimary" variant="h5">
+                <Trans i18nKey="city" />
+              </Typography>
+              <Typography color="textPrimary" variant="h5">
+                <Trans i18nKey="age" />
+              </Typography>
+            </Breadcrumbs>
+          </Grid>
+          <Grid item>
+            <img alt="portrait" src={portrait} height={300} />
+          </Grid>
+          <Grid item>
+            <Typography>
+              <Trans i18nKey="selfDescription" />
             </Typography>
-            <Typography color="textPrimary">
-              <Trans i18nKey="city" />
-            </Typography>
-            <Typography color="textPrimary">
-              <Trans i18nKey="age" />
-            </Typography>
-          </Breadcrumbs>
+          </Grid>
         </Grid>
-        <Grid item>
-          <img alt="portrait" src={portrait} height={300} />
-        </Grid>
-        <Grid item>
-          <Typography>
-            <Trans i18nKey="selfDescription" />
-          </Typography>
-        </Grid>
-      </Grid>
+      </Paper>
     </Container>
   );
 };

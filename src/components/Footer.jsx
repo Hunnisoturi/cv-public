@@ -8,13 +8,18 @@ import { isFinnish } from '../utils/utils';
 const styles = makeStyles({
   footer: {
     display: 'flex',
+    alignItems: 'center',
     background: '#212121',
     color: '#ffffff',
     bottom: '0',
     position: 'fixed',
     width: '100%',
     height: '5rem',
+  },
+  container: {
+    display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
 
@@ -30,7 +35,7 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className={classes.container}>
         <Typography variant="h6" align="center">
           <Trans i18nKey="copyright" />
         </Typography>
