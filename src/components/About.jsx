@@ -23,8 +23,8 @@ const About = () => {
     <Container maxWidth="xl" className={classes.container}>
       <Grid container className={classes.gridContainer} direction="column">
         <Grid item>
-          <Breadcrumbs separator=">" aria-label="breadcrumb" component="p">
-            <Typography color="textPrimary" component="p">
+          <Breadcrumbs separator=">" aria-label="breadcrumb">
+            <Typography color="textPrimary">
               <Trans i18nKey="name" />
             </Typography>
             <Typography color="textPrimary">
