@@ -22,10 +22,6 @@ const theme = createMuiTheme({
     secondary: {
       main: '#342EAD',
     },
-    background: {
-      paper: '#424242',
-      default: '#303030',
-    },
   },
 });
 
@@ -57,11 +53,11 @@ i18next
   });
 
 render(
-  <ThemeProvider theme={theme}>
-    <Router>
+  <Router>
+    <ThemeProvider theme={theme}>
       <App />
-    </Router>
-  </ThemeProvider>,
+    </ThemeProvider>
+  </Router>,
   document.getElementById('root'),
 );
 
