@@ -13,9 +13,9 @@ const styles = makeStyles(theme => ({
     '& > *': {
       margin: theme.spacing(0.7),
     },
-    container: {
-      marginTop: '200px',
-    },
+  },
+  container: {
+    paddingTop: '100px',
   },
 }));
 

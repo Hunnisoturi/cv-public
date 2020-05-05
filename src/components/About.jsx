@@ -13,9 +13,6 @@ const styles = makeStyles(theme => ({
     padding: '32px',
     color: '#ffffff',
   },
-  // paper: {
-  //   width: '30%',
-  // },
 }));
 
 const About = () => {
