@@ -17,7 +17,7 @@ const styles = makeStyles({
     marginBottom: '4rem',
   },
   mainGrid: {
-    marginTop: '150px',
+    paddingTop: '150px',
   },
 });
 
@@ -25,8 +25,8 @@ const App = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
+      <Header />
       <Container maxWidth="xl" className={classes.container}>
-        <Header />
         <div>
           <Grid item xs={12} sm container spacing={3} className={classes.mainGrid}>
             <Grid item xs container direction="column" alignItems="flex-start">
@@ -44,6 +44,8 @@ const App = () => {
             </Grid>
           </Grid>
         </div>
+        <Technologies />
+        <Technologies />
         <Technologies />
       </Container>
       <Footer />

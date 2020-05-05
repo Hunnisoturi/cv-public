@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toolbar, Button, Box } from '@material-ui/core';
+import { Toolbar, Button, Box, AppBar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from 'react-i18next';
 
@@ -18,8 +18,8 @@ const styles = makeStyles({
     alignItems: 'center',
   },
   button: {
-    marginLeft: '16px',
-    marginRight: '16px',
+    marginLeft: '12px',
+    marginRight: '12px',
   },
 });
 
@@ -27,21 +27,23 @@ const Header = () => {
   const classes = styles();
   return (
     <header>
-      <Toolbar className={classes.toolbar}>
-        <Logo height={100} />
-        <Box className={classes.navi} component="span">
-          <SmallPipe className={classes.button} />
-          <Button size="large" className={classes.button}>
-            <Trans i18nKey="home" />
-          </Button>
-          <Button size="large" className={classes.button}>
-            <Trans i18nKey="portfolio" />
-          </Button>
-          <Button size="large" className={classes.button}>
-            <Trans i18nKey="contact" />
-          </Button>
-        </Box>
-      </Toolbar>
+      <AppBar color="transparent" elevation={0}>
+        <Toolbar className={classes.toolbar}>
+          <Logo height={100} />
+          <Box className={classes.navi} component="span">
+            <SmallPipe className={classes.button} />
+            <Button size="large" className={classes.button}>
+              <Trans i18nKey="home" />
+            </Button>
+            <Button size="large" className={classes.button}>
+              <Trans i18nKey="portfolio" />
+            </Button>
+            <Button size="large" className={classes.button}>
+              <Trans i18nKey="contact" />
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
     </header>
   );
 };
