@@ -13,9 +13,9 @@ const styles = makeStyles(theme => ({
     padding: '32px',
     color: '#ffffff',
   },
-  paper: {
-    width: '30%',
-  },
+  // paper: {
+  //   width: '30%',
+  // },
 }));
 
 const About = () => {
@@ -26,14 +26,19 @@ const About = () => {
       <Paper className={classes.paper}>
         <Grid container className={classes.gridContainer} direction="column" spacing={4}>
           <Grid item>
+            <Typography color="textPrimary" variant="h3">
+              <Trans i18nKey="whoami" />
+            </Typography>
+          </Grid>
+          <Grid item>
             <Breadcrumbs separator=">" aria-label="breadcrumb">
-              <Typography color="textPrimary" variant="h5">
+              <Typography color="textPrimary" variant="h4">
                 <Trans i18nKey="name" />
               </Typography>
-              <Typography color="textPrimary" variant="h5">
+              <Typography color="textPrimary" variant="h4">
                 <Trans i18nKey="city" />
               </Typography>
-              <Typography color="textPrimary" variant="h5">
+              <Typography color="textPrimary" variant="h4">
                 <Trans i18nKey="age" />
               </Typography>
             </Breadcrumbs>

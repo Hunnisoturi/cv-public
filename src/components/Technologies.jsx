@@ -11,10 +11,10 @@ const styles = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: 'center',
     '& > *': {
-      margin: theme.spacing(0.5),
+      margin: theme.spacing(0.7),
     },
     container: {
-      paddingTop: '150px',
+      marginTop: '200px',
     },
   },
 }));
@@ -31,6 +31,7 @@ const Technologies = () => {
       <Container maxWidth="sm" className={classes.chipContainer}>
         {tech.map(t => (
           <Chip
+            key={t}
             variant="outlined"
             color="primary"
             label={t}
