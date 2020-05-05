@@ -30,7 +30,7 @@ const Header = () => {
       <AppBar color="transparent" elevation={0}>
         <Toolbar className={classes.toolbar}>
           <Logo height={100} />
-          <Box className={classes.navi} component="span">
+          <Box className={classes.navi} component="nav">
             <SmallPipe className={classes.button} />
             <Button size="large" className={classes.button}>
               <Trans i18nKey="home" />
