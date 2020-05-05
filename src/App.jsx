@@ -5,12 +5,15 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
 import About from './components/About';
-import Skills from './components/Skills';
+import Technologies from './components/Technologies';
 
 const styles = makeStyles({
   root: {
-    height: '100vh',
+    height: '100%',
     background: '#2D2D2D',
+  },
+  container: {
+    marginBottom: '4rem',
   },
 });
 
@@ -18,12 +21,12 @@ const App = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
-      <Header />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className={classes.container}>
+        <Header />
         <main>
           <Intro />
           <About />
-          <Skills />
+          <Technologies />
         </main>
       </Container>
       <Footer />

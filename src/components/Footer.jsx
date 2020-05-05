@@ -14,7 +14,7 @@ const styles = makeStyles({
     bottom: '0',
     position: 'fixed',
     width: '100%',
-    height: '5rem',
+    height: '4rem',
   },
   container: {
     display: 'flex',
