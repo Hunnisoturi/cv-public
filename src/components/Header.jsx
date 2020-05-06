@@ -1,5 +1,6 @@
 import React from 'react';
 import { Toolbar, Button, Box, AppBar, Typography } from '@material-ui/core';
+import { KeyboardArrowDown } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from 'react-i18next';
 
@@ -19,6 +20,7 @@ const styles = makeStyles({
   button: {
     marginLeft: '12px',
     marginRight: '12px',
+    fontWeight: 'bold',
   },
 });
 
@@ -49,6 +51,7 @@ const Header = () => {
               <Typography>
                 <Trans i18nKey="language" />
               </Typography>
+              <KeyboardArrowDown />
             </Button>
           </Box>
         </Toolbar>

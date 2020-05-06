@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, makeStyles, Grid, Typography } from '@material-ui/core';
+import { Container, makeStyles, Grid } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Headline from './components/Headline';
@@ -27,7 +27,6 @@ const App = () => {
           <Grid container direction="row">
             <Grid item xs={6}>
               <Headline />
-
             </Grid>
           </Grid>
         </Container>
