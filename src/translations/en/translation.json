@@ -1,14 +1,20 @@
 {
   "appbar": "Appbar",
+  "amk": "Tampere University of Applied Sciences, Software Development",
+  "amkPlaceAndTime": "Tampere, Finland 2016-",
+  "callToAction": "Scroll down to learn more!",
   "contact": "Contact",
   "copyright" : "Copyright @ Aapo Attila 2020",
+  "comma": ",",
   "education": "Education",
-  "headline": "Fetish for \nCode",
+  "design": "design",
+  "headlineStart": "Beautiful ",
+  "headlineEnd": "beautiful \nexecution",
   "home": "Home",
   "introText": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "language": "Language",
   "portfolio": "Portfolio",
-  "selfDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+  "selfDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years",
   "technologies": "Technologies",
-  "whoami": "Who am i?"
+  "whoami": "Who am I?"
 }

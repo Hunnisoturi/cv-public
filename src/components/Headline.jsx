@@ -13,9 +13,18 @@ const Headline = () => {
   const classes = styles();
 
   return (
-    <Typography variant="h1" color="textPrimary" className={classes.multiline}>
-      <Trans i18nKey="headline" />
-    </Typography>
+    <div>
+      <Typography variant="h1" color="textPrimary">
+        <Trans i18nKey="headlineStart" />
+      </Typography>
+      <Typography variant="h1" color="primary">
+        <Trans i18nKey="design" />
+        <Trans i18nKey="comma" />
+      </Typography>
+      <Typography variant="h1" color="textPrimary" className={classes.multiline}>
+        <Trans i18nKey="headlineEnd" />
+      </Typography>
+    </div>
   );
 };
 

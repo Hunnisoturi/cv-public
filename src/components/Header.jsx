@@ -7,6 +7,9 @@ import { Trans } from 'react-i18next';
 import { ReactComponent as Logo } from '../assets/Logo.svg';
 
 const styles = makeStyles({
+  appbar: {
+    background: '#F5F5F5',
+  },
   toolbar: {
     justifyContent: 'space-between',
   },
@@ -28,7 +31,7 @@ const Header = () => {
   const classes = styles();
   return (
     <header>
-      <AppBar color="transparent" elevation={0}>
+      <AppBar bgcolor="#f5f5f5" elevation={0} className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <Logo height={100} />
           <Box className={classes.navi} component="nav">

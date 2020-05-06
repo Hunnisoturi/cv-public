@@ -1,56 +1,81 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
-import { Container, Grid, Breadcrumbs, Typography, Paper } from '@material-ui/core';
+import { Avatar, Grid, Typography } from '@material-ui/core';
+import { Mood } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
 import portrait from '../assets/portrait.jpg';
 
-const styles = makeStyles(theme => ({
+const styles = makeStyles({
+  avatar: {
+    marginTop: '150px',
+    height: '300px',
+    width: '300px',
+  },
   container: {
-    paddingTop: '150px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: '100px',
   },
   gridContainer: {
-    padding: '32px',
-    color: '#ffffff',
+    marginTop: '150px',
   },
-}));
+  icon: {
+    height: '100px',
+    width: '100px',
+    paddingBottom: '50px',
+  },
+});
 
 const About = () => {
   const classes = styles();
 
   return (
-    <Container maxWidth="xl" className={classes.container}>
-      <Paper className={classes.paper}>
-        <Grid container className={classes.gridContainer} direction="column" spacing={4}>
-          <Grid item>
-            <Typography color="textPrimary" variant="h3">
-              <Trans i18nKey="whoami" />
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Breadcrumbs separator=">" aria-label="breadcrumb">
-              <Typography color="textPrimary" variant="h4">
-                <Trans i18nKey="name" />
+    <div className={classes.container}>
+      <Typography variant="h3">
+        <Trans i18nKey="whoami" />
+      </Typography>
+      <Avatar alt="Aapo Attila" src={portrait} height="" className={classes.avatar} />
+      <Grid container className={classes.gridContainer}>
+        <Grid item xs={4}>
+          <Grid container direction="column" item alignItems="center">
+            <Grid item xs={6}>
+              <Mood className={classes.icon} />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="h5">
+                <Trans i18nKey="selfDescription" />
               </Typography>
-              <Typography color="textPrimary" variant="h4">
-                <Trans i18nKey="city" />
-              </Typography>
-              <Typography color="textPrimary" variant="h4">
-                <Trans i18nKey="age" />
-              </Typography>
-            </Breadcrumbs>
-          </Grid>
-          <Grid item>
-            <img alt="portrait" src={portrait} height={300} />
-          </Grid>
-          <Grid item>
-            <Typography>
-              <Trans i18nKey="selfDescription" />
-            </Typography>
+            </Grid>
           </Grid>
         </Grid>
-      </Paper>
-    </Container>
+        <Grid item xs={4}>
+          <Grid container direction="column" item alignItems="center">
+            <Grid item xs={6}>
+              <Mood className={classes.icon} />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="h5">
+                <Trans i18nKey="selfDescription" />
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={4}>
+          <Grid container direction="column" item alignItems="center">
+            <Grid item xs={6}>
+              <Mood className={classes.icon} />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="h5">
+                <Trans i18nKey="selfDescription" />
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </div>
   );
 };
 

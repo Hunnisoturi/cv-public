@@ -1,14 +1,20 @@
 {
   "appbar": "Appipalkki",
+  "amk": "Tampereen Ammattikorkeakoulu, Tieto- ja viestintätekniikka, Ohjelmistotekniikka",
+  "amkPlaceAndTime": "Tampere, Suomi 2016-",
+  "callToAction": "Vieritä alas nähdäksesi lisää!",
   "contact": "Yhteystiedot",
   "copyright": "Copyright @ Aapo Attila 2020",
+  "comma": ",",
   "education": "Koulutus",
-  "headline": "Fetissi \nKoodiin",
+  "design": "suunniteltu",
+  "headlineStart": "Kauniisti ",
+  "headlineEnd": "kauniisti toteutettu",
   "home": "Etusivu",
   "introText": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "language": "Kieli",
   "portfolio": "Portfolio",
-  "selfDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+  "selfDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "technologies": "Teknologiat",
   "whoami": "Kuka minä olen?"
 }

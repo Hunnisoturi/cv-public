@@ -17,10 +17,14 @@ const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      main: '#EA6227',
+      main: '#D38A51',
     },
     secondary: {
-      main: '#342EAD',
+      main: '#434343',
+    },
+    background: {
+      paper: '#ffffff',
+      default: '#F5F5F5',
     },
   },
   typography: {
