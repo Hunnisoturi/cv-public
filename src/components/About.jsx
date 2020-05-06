@@ -41,7 +41,7 @@ const About = () => {
         <Grid item xs={4}>
           <Grid container direction="column" item alignItems="center">
             <Grid item xs={6}>
-              <Mood className={classes.icon} />
+              <Mood color="secondary" className={classes.icon} />
             </Grid>
             <Grid item xs={6}>
               <Typography variant="h5">
@@ -53,7 +53,7 @@ const About = () => {
         <Grid item xs={4}>
           <Grid container direction="column" item alignItems="center">
             <Grid item xs={6}>
-              <Mood className={classes.icon} />
+              <Mood color="secondary" className={classes.icon} />
             </Grid>
             <Grid item xs={6}>
               <Typography variant="h5">
@@ -65,7 +65,7 @@ const About = () => {
         <Grid item xs={4}>
           <Grid container direction="column" item alignItems="center">
             <Grid item xs={6}>
-              <Mood className={classes.icon} />
+              <Mood color="secondary" className={classes.icon} />
             </Grid>
             <Grid item xs={6}>
               <Typography variant="h5">

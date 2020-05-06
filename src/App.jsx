@@ -74,6 +74,7 @@ const App = () => {
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
+          <About />
         </Container>
       </main>
     </div>

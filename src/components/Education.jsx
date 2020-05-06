@@ -10,7 +10,8 @@ const styles = makeStyles({
     marginTop: '150px',
   },
   dot: {
-    overflow: 'visible',
+    display: 'flex',
+    justifyContent: 'center',
   },
 });
 
@@ -18,27 +19,31 @@ const Education = () => {
   const classes = styles();
 
   return (
-    <Grid container className={classes.container}>
-      <Grid item xs={6}>
+    <Grid container direction="row" justify="center" className={classes.container}>
+      <Grid item xs={6} className={classes.dot}>
         {/* // TODO: FIX BROKEN SVG */}
-        <EduDot className={classes.dot} />
+        <EduDot />
       </Grid>
       <Grid container direction="column" item xs={6} alignItems="center">
-        <Grid item xs={6}>
-          <Typography variant="h5">
-            <Trans i18nKey="amk" />
-          </Typography>
-          <Typography variant="h6" color="secondary">
-            <Trans i18nKey="amkPlaceAndTime" />
-          </Typography>
+        <Grid container direction="column" item xs={6} justify="center">
+          <Grid item>
+            <Typography variant="h5">
+              <Trans i18nKey="amk" />
+            </Typography>
+            <Typography variant="h6" color="secondary">
+              <Trans i18nKey="amkPlaceAndTime" />
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={6}>
-          <Typography variant="h5">
-            <Trans i18nKey="amk" />
-          </Typography>
-          <Typography variant="h6" color="secondary">
-            <Trans i18nKey="amkPlaceAndTime" />
-          </Typography>
+        <Grid container direction="column" item xs={6} justify="center">
+          <Grid item>
+            <Typography variant="h5">
+              <Trans i18nKey="amk" />
+            </Typography>
+            <Typography variant="h6" color="secondary">
+              <Trans i18nKey="amkPlaceAndTime" />
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Toolbar, Button, Box, AppBar, Typography } from '@material-ui/core';
-import { KeyboardArrowDown } from '@material-ui/icons';
+import { Trans, useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Trans } from 'react-i18next';
+import { Constants } from '../utils/constants';
+import { isFinnish } from '../utils/utils';
 
 import { ReactComponent as Logo } from '../assets/Logo.svg';
 
@@ -29,6 +30,14 @@ const styles = makeStyles({
 
 const Header = () => {
   const classes = styles();
+  const { i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    const { languages: { en, fi } } = Constants;
+
+    i18n.changeLanguage(isFinnish(i18n.language) ? en : fi);
+  };
+
   return (
     <header>
       <AppBar bgcolor="#f5f5f5" elevation={0} className={classes.appbar}>
@@ -50,11 +59,14 @@ const Header = () => {
                 <Trans i18nKey="contact" />
               </Typography>
             </Button>
-            <Button size="large" className={classes.button}>
+            <Button
+              size="large"
+              className={classes.button}
+              onClick={changeLanguage}
+            >
               <Typography>
                 <Trans i18nKey="language" />
               </Typography>
-              <KeyboardArrowDown />
             </Button>
           </Box>
         </Toolbar>
