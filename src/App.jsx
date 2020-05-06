@@ -1,17 +1,13 @@
 import React from 'react';
-import { Container, makeStyles, Grid } from '@material-ui/core';
+import { Container, makeStyles, Grid, Typography } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
 import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './components/About';
-import Technologies from './components/Technologies';
 import Headline from './components/Headline';
-import Education from './components/Education';
 
 const styles = makeStyles({
   root: {
-    height: '100%',
-    background: '#2D2D2D',
+    height: '100vh',
+    background: '#F5F5F5',
   },
   container: {
     marginBottom: '4rem',
@@ -26,29 +22,16 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Header />
-      <Container maxWidth="xl" className={classes.container}>
-        <div>
-          <Grid item xs={12} sm container spacing={3} className={classes.mainGrid}>
-            <Grid item xs container direction="column" alignItems="flex-start">
-              <Grid item xs>
-                <Headline />
-              </Grid>
-              <Grid item xs={8}>
-                <Education />
-              </Grid>
-            </Grid>
-            <Grid item xs container direction="column" alignItems="flex-end">
-              <Grid item xs={7}>
-                <About />
-              </Grid>
+      <main>
+        <Container maxWidth="xl" className={classes.mainGrid}>
+          <Grid container direction="row">
+            <Grid item xs={6}>
+              <Headline />
+
             </Grid>
           </Grid>
-        </div>
-        <Technologies />
-        <Technologies />
-        <Technologies />
-      </Container>
-      <Footer />
+        </Container>
+      </main>
     </div>
   );
 };

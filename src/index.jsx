@@ -11,17 +11,20 @@ import translationCommon from './translations/common.json';
 import App from './App';
 import { register } from './serviceWorker';
 
-import 'typeface-roboto';
+import 'typeface-nunito';
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark',
+    type: 'light',
     primary: {
       main: '#EA6227',
     },
     secondary: {
       main: '#342EAD',
     },
+  },
+  typography: {
+    fontFamily: 'Nunito, Roboto',
   },
 });
 
