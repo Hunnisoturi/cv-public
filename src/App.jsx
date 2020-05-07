@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, makeStyles, Grid, Divider } from '@material-ui/core';
+import { Container, makeStyles, Grid, Divider, Fade } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
 import { ArrowDownward } from '@material-ui/icons';
 import Header from './components/Header';
@@ -55,14 +55,20 @@ const App = () => {
               xs={6}
               className={classes.headlineGridItem}
             >
-              <Headline />
+              <Fade in timeout={1000}>
+                <div>
+                  <Headline />
+                </div>
+              </Fade>
             </Grid>
             <Grid
               item
               xs={6}
               className={classes.headlineGridItem}
             >
-              <Dots />
+              <Fade in timeout={1700}>
+                <Dots />
+              </Fade>
             </Grid>
           </Grid>
           <CallToAction />
