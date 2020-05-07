@@ -16,6 +16,9 @@ const styles = makeStyles({
   bubbles: {
     marginTop: '150px',
   },
+  subtitle: {
+    marginTop: '50px',
+  },
 });
 
 const Technologies = () => {
@@ -25,6 +28,9 @@ const Technologies = () => {
     <div className={classes.container}>
       <Typography variant="h3">
         <Trans i18nKey="technologies" />
+      </Typography>
+      <Typography variant="h5" color="secondary" className={classes.subtitle}>
+        <Trans i18nKey="technologySubtitle" />
       </Typography>
       <div className={classes.bubbles}>
         <Bubbles />

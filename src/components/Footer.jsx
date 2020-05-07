@@ -1,50 +1,38 @@
 import React from 'react';
-import { Trans, useTranslation } from 'react-i18next';
-import { Container, Typography, Button } from '@material-ui/core';
+import { Trans } from 'react-i18next';
+import { Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Constants } from '../utils/constants';
-import { isFinnish } from '../utils/utils';
+
 
 const styles = makeStyles({
   footer: {
     display: 'flex',
     alignItems: 'center',
-    background: '#212121',
-    color: '#ffffff',
-    bottom: '0',
-    position: 'fixed',
+    background: '#F5F5F5',
     width: '100%',
-    height: '4rem',
   },
   container: {
     display: 'flex',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '30px',
+    marginBottom: '30px',
   },
 });
 
 const Footer = () => {
   const classes = styles();
-  const { i18n } = useTranslation();
-
-  const changeLanguage = () => {
-    const { languages: { en, fi } } = Constants;
-
-    i18n.changeLanguage(isFinnish(i18n.language) ? en : fi);
-  };
 
   return (
     <footer className={classes.footer}>
       <Container maxWidth="xl" className={classes.container}>
-        <Typography variant="h6" align="center">
+        <Typography variant="h5">
+          <Trans i18nKey="footerMsg" />
+        </Typography>
+        <Typography variant="h6" color="secondary">
           <Trans i18nKey="copyright" />
         </Typography>
-        <Button
-          variant="outlined"
-          onClick={changeLanguage}
-        >
-          <Trans i18nKey="language" />
-        </Button>
       </Container>
     </footer>
   );

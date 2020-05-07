@@ -9,6 +9,8 @@ import Projects from './components/Projects';
 import CallToAction from './components/CallToAction';
 import Technologies from './components/Technologies';
 import ArrowDown from './components/ArrowDown';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 import { ReactComponent as Dots } from './assets/dots.svg';
 
@@ -86,6 +88,8 @@ const App = () => {
           <ArrowDown />
         </Container>
       </main>
+      <Contact />
+      <Footer />
     </div>
   );
 };
