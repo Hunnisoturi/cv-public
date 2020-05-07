@@ -10,6 +10,7 @@ import { ReactComponent as Logo } from '../assets/Logo.svg';
 const styles = makeStyles({
   appbar: {
     background: '#F5F5F5',
+    opacity: '95%',
   },
   toolbar: {
     justifyContent: 'space-between',

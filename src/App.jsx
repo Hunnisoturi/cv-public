@@ -1,12 +1,14 @@
 import React from 'react';
-import { Container, makeStyles, Grid, Typography, Divider } from '@material-ui/core';
-import { Trans, withTranslation } from 'react-i18next';
-import { KeyboardArrowDown, ArrowDownward } from '@material-ui/icons';
+import { Container, makeStyles, Grid, Divider } from '@material-ui/core';
+import { withTranslation } from 'react-i18next';
+import { ArrowDownward } from '@material-ui/icons';
 import Header from './components/Header';
 import Headline from './components/Headline';
 import About from './components/About';
 import Education from './components/Education';
 import Projects from './components/Projects';
+import CallToAction from './components/CallToAction';
+import Technologies from './components/Technologies';
 
 import { ReactComponent as Dots } from './assets/dots.svg';
 
@@ -21,10 +23,6 @@ const styles = makeStyles({
   divider: {
     marginTop: '150px',
   },
-  icon: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
   mainGrid: {
     paddingTop: '300px',
   },
@@ -32,9 +30,6 @@ const styles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  scrollDown: {
-    marginTop: '350px',
   },
   arrow: {
     height: '100px',
@@ -70,17 +65,7 @@ const App = () => {
               <Dots />
             </Grid>
           </Grid>
-          <Typography
-            color="secondary"
-            align="center"
-            variant="h5"
-            className={classes.scrollDown}
-          >
-            <Trans i18nKey="callToAction" />
-          </Typography>
-          <span className={classes.icon}>
-            <KeyboardArrowDown color="secondary" />
-          </span>
+          <CallToAction />
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
@@ -88,6 +73,8 @@ const App = () => {
             <ArrowDownward color="secondary" className={classes.arrow} />
           </span>
           <Projects />
+          <Divider orientation="horizontal" className={classes.divider} />
+          <Technologies />
         </Container>
       </main>
     </div>

@@ -20,7 +20,6 @@ const styles = makeStyles({
   },
   gridContainer: {
     marginTop: '150px',
-    marginBottom: '150px',
   },
   gridItem: {
     display: 'flex',
