@@ -7,10 +7,8 @@ import cvPhoto from '../assets/cvProject2x.jpg';
 
 const styles = makeStyles({
   paper: {
-    padding: '30px',
     borderRadius: '25px',
-    width: '400px',
-    display: 'inline-block',
+    maxWidth: '420px',
   },
   container: {
     display: 'flex',
@@ -26,6 +24,11 @@ const styles = makeStyles({
     justifyContent: 'center',
   },
   image: {
+    width: '420px',
+    height: '263px',
+    borderRadius: '25px 25px 0px 0px',
+  },
+  imageContainer: {
     display: 'flex',
     justifyContent: 'center',
   },
@@ -35,6 +38,9 @@ const styles = makeStyles({
   subtitle: {
     marginTop: '40px',
     marginBottom: '40px',
+  },
+  textContainer: {
+    padding: '30px',
   },
 });
 
@@ -55,18 +61,20 @@ const Projects = () => {
       <Grid container className={classes.gridContainer} justify="center">
         {projects.map(p => (
           <Grid item xs={4} className={classes.gridItem} key={p}>
-            <Paper elevation={3} className={classes.paper}>
+            <Paper elevation={8} className={classes.paper}>
               <Grid container direction="column">
                 <Grid item xs>
-                  <div className={classes.image}>
-                    <img alt="Project" src={cvPhoto} width="420" height="263" />
+                  <div className={classes.imageContainer}>
+                    <img alt="Project" src={cvPhoto} className={classes.image} />
                   </div>
-                  <Typography variant="h4" className={classes.header}>
-                    <Trans i18nKey="cvCardHeader" />
-                  </Typography>
-                  <Typography variant="h5" color="secondary" className={classes.subtitle}>
-                    <Trans i18nKey="cvCardSubtitle" />
-                  </Typography>
+                  <div className={classes.textContainer}>
+                    <Typography variant="h4" className={classes.header}>
+                      <Trans i18nKey="cvCardHeader" />
+                    </Typography>
+                    <Typography variant="h5" color="secondary" className={classes.subtitle}>
+                      <Trans i18nKey="cvCardSubtitle" />
+                    </Typography>
+                  </div>
                 </Grid>
               </Grid>
             </Paper>

@@ -48,7 +48,7 @@ const About = () => {
           <Grid item xs={4} key={i}>
             <Grid container direction="column" item alignItems="center">
               <Grid item xs={6}>
-                <Mood color="secondary" className={classes.icon} />
+                <Mood color="primary" className={classes.icon} />
               </Grid>
               <Grid item xs={6}>
                 <Typography variant="h5">

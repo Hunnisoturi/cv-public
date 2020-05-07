@@ -71,7 +71,11 @@ const App = () => {
               </Fade>
             </Grid>
           </Grid>
-          <CallToAction />
+          <Fade in timeout={1700}>
+            <div>
+              <CallToAction />
+            </div>
+          </Fade>
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
