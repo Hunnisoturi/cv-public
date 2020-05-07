@@ -40,23 +40,29 @@ const Header = () => {
 
   return (
     <header>
-      <AppBar bgcolor="#f5f5f5" elevation={0} className={classes.appbar}>
+      <AppBar elevation={0} className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <Logo height={100} />
           <Box className={classes.navi} component="nav">
             <Button size="large" className={classes.button}>
-              <Typography>
-                <Trans i18nKey="home" />
+              <Typography component="h6">
+                <Box fontWeight={700}>
+                  <Trans i18nKey="home" />
+                </Box>
               </Typography>
             </Button>
             <Button size="large" className={classes.button}>
-              <Typography>
-                <Trans i18nKey="portfolio" />
+              <Typography component="h6">
+                <Box fontWeight={700}>
+                  <Trans i18nKey="portfolio" />
+                </Box>
               </Typography>
             </Button>
             <Button size="large" className={classes.button}>
-              <Typography>
-                <Trans i18nKey="contact" />
+              <Typography component="h6">
+                <Box fontWeight={700}>
+                  <Trans i18nKey="contact" />
+                </Box>
               </Typography>
             </Button>
             <Button
@@ -64,8 +70,10 @@ const Header = () => {
               className={classes.button}
               onClick={changeLanguage}
             >
-              <Typography>
-                <Trans i18nKey="language" />
+              <Typography component="h6">
+                <Box fontWeight={700}>
+                  <Trans i18nKey="language" />
+                </Box>
               </Typography>
             </Button>
           </Box>

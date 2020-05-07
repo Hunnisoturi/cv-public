@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, makeStyles, Grid, Typography, Divider } from '@material-ui/core';
 import { Trans, withTranslation } from 'react-i18next';
-import { KeyboardArrowDown } from '@material-ui/icons';
+import { KeyboardArrowDown, ArrowDownward } from '@material-ui/icons';
 import Header from './components/Header';
 import Headline from './components/Headline';
 import About from './components/About';
 import Education from './components/Education';
+import Projects from './components/Projects';
 
 import { ReactComponent as Dots } from './assets/dots.svg';
 
@@ -20,7 +21,7 @@ const styles = makeStyles({
   divider: {
     marginTop: '150px',
   },
-  downIcon: {
+  icon: {
     display: 'flex',
     justifyContent: 'center',
   },
@@ -33,7 +34,16 @@ const styles = makeStyles({
     justifyContent: 'center',
   },
   scrollDown: {
-    marginTop: '300px',
+    marginTop: '350px',
+  },
+  arrow: {
+    height: '100px',
+    width: 'auto',
+  },
+  arrowSpan: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '150px',
   },
 });
 
@@ -68,13 +78,16 @@ const App = () => {
           >
             <Trans i18nKey="callToAction" />
           </Typography>
-          <span className={classes.downIcon}>
+          <span className={classes.icon}>
             <KeyboardArrowDown color="secondary" />
           </span>
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
-          <About />
+          <span className={classes.arrowSpan}>
+            <ArrowDownward color="secondary" className={classes.arrow} />
+          </span>
+          <Projects />
         </Container>
       </main>
     </div>

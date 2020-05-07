@@ -6,6 +6,8 @@
   "contact": "Yhteystiedot",
   "copyright": "Copyright @ Aapo Attila 2020",
   "comma": ",",
+  "cvCardHeader": "Tämä sivu!",
+  "cvCardSubtitle": "Tämä sivu on rakennettu Reactilla ja Material UI:lla.",
   "education": "Koulutus",
   "design": "suunniteltu",
   "headlineStart": "Kauniisti ",
@@ -14,7 +16,9 @@
   "introText": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "language": "In English",
   "portfolio": "Portfolio",
+  "projects": "Projektit",
   "selfDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "technologies": "Teknologiat",
+  "title": "Aapo Attila, Fullstack kehittäjä",
   "whoami": "Kuka minä olen?"
 }

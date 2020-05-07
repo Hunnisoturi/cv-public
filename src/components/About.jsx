@@ -28,6 +28,12 @@ const styles = makeStyles({
   },
 });
 
+const items = [
+  1,
+  2,
+  3,
+];
+
 const About = () => {
   const classes = styles();
 
@@ -38,42 +44,20 @@ const About = () => {
       </Typography>
       <Avatar alt="Aapo Attila" src={portrait} height="" className={classes.avatar} />
       <Grid container className={classes.gridContainer}>
-        <Grid item xs={4}>
-          <Grid container direction="column" item alignItems="center">
-            <Grid item xs={6}>
-              <Mood color="secondary" className={classes.icon} />
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h5">
-                <Trans i18nKey="selfDescription" />
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={4}>
-          <Grid container direction="column" item alignItems="center">
-            <Grid item xs={6}>
-              <Mood color="secondary" className={classes.icon} />
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h5">
-                <Trans i18nKey="selfDescription" />
-              </Typography>
+        {items.map(i => (
+          <Grid item xs={4} key={i}>
+            <Grid container direction="column" item alignItems="center">
+              <Grid item xs={6}>
+                <Mood color="secondary" className={classes.icon} />
+              </Grid>
+              <Grid item xs={6}>
+                <Typography variant="h5">
+                  <Trans i18nKey="selfDescription" />
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid item xs={4}>
-          <Grid container direction="column" item alignItems="center">
-            <Grid item xs={6}>
-              <Mood color="secondary" className={classes.icon} />
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="h5">
-                <Trans i18nKey="selfDescription" />
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
+        ))}
       </Grid>
     </div>
   );

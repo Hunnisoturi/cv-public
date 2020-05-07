@@ -1,10 +1,11 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles({
-  multiline: {
+  design: {
+    display: 'inline-block',
     whiteSpace: 'pre',
   },
 });
@@ -14,15 +15,24 @@ const Headline = () => {
 
   return (
     <div>
+      <Typography variant="h1" color="textPrimary" className={classes.design}>
+        <Box fontWeight={500}>
+          <Trans i18nKey="headlineStart" />
+        </Box>
+      </Typography>
+      <Typography variant="h1" color="primary" className={classes.design}>
+        <Box fontWeight={500}>
+          <Trans i18nKey="design" />
+          <Trans i18nKey="comma" />
+        </Box>
+      </Typography>
       <Typography variant="h1" color="textPrimary">
-        <Trans i18nKey="headlineStart" />
+        <Box fontWeight={500}>
+          <Trans i18nKey="headlineEnd" />
+        </Box>
       </Typography>
-      <Typography variant="h1" color="primary">
-        <Trans i18nKey="design" />
-        <Trans i18nKey="comma" />
-      </Typography>
-      <Typography variant="h1" color="textPrimary" className={classes.multiline}>
-        <Trans i18nKey="headlineEnd" />
+      <Typography variant="h5" color="secondary">
+        <Trans i18nKey="title" />
       </Typography>
     </div>
   );
