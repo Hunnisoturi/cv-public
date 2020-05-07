@@ -61,7 +61,7 @@ const Projects = () => {
       <Grid container className={classes.gridContainer} justify="center">
         {projects.map(p => (
           <Grid item xs={4} className={classes.gridItem} key={p}>
-            <Paper elevation={8} className={classes.paper}>
+            <Paper elevation={5} className={classes.paper}>
               <Grid container direction="column">
                 <Grid item xs>
                   <div className={classes.imageContainer}>

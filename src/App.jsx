@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, makeStyles, Grid, Divider, Fade } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
-import { ArrowDownward } from '@material-ui/icons';
 import Header from './components/Header';
 import Headline from './components/Headline';
 import About from './components/About';
@@ -9,6 +8,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import CallToAction from './components/CallToAction';
 import Technologies from './components/Technologies';
+import ArrowDown from './components/ArrowDown';
 
 import { ReactComponent as Dots } from './assets/dots.svg';
 
@@ -79,12 +79,11 @@ const App = () => {
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
-          <span className={classes.arrowSpan}>
-            <ArrowDownward color="secondary" className={classes.arrow} />
-          </span>
+          <ArrowDown />
           <Projects />
           <Divider orientation="horizontal" className={classes.divider} />
           <Technologies />
+          <ArrowDown />
         </Container>
       </main>
     </div>
