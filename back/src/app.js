@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3002;
 
+dotenv.config();
+
 const sendRouter = require('./routes/send');
 
 app.use(cors({
@@ -14,8 +16,6 @@ app.use(cors({
 }));
 
 app.use(bodyParser.json());
-
-dotenv.config();
 
 app.disable('x-powered-by');
 

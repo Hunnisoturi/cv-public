@@ -5,15 +5,15 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: 'aapocvmailer@gmail.com',
-    pass: '36Bg&8Q#%oaC',
+    user: process.env.SMTP_USER_USERNAME,
+    pass: process.env.SMTP_USER_PASSWORD,
   }
 });
 
 const getMessage = (name, company, email) => {
   const message = {
     from: 'aapocvmailer@gmail.com',
-    to: 'aapo.attila@windowslive.com',
+    to: process.env.RECEPIENT_EMAIL,
     subject: 'CV - Uusi yhteydenotto',
     html: `<p>Uusi yhteydenotto!<br/>
           <br/>
