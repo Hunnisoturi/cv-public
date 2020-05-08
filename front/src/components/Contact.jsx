@@ -137,20 +137,6 @@ const Contact = () => {
         </span>
         <span className={classes.item}>
           <Typography variant="h5" className={classes.label}>
-            <Trans i18nKey="formCompany" />
-          </Typography>
-          <TextField
-            required
-            id="company"
-            variant="outlined"
-            color="primary"
-            className={classes.field}
-            value={company}
-            onChange={handleCompanyChanged}
-          />
-        </span>
-        <span className={classes.item}>
-          <Typography variant="h5" className={classes.label}>
             <Trans i18nKey="formEmail" />
           </Typography>
           <TextField
@@ -161,6 +147,20 @@ const Contact = () => {
             className={classes.field}
             value={email}
             onChange={handleEmailChanged}
+          />
+        </span>
+        <span className={classes.item}>
+          <Typography variant="h5" className={classes.label}>
+            <Trans i18nKey="formCompany" />
+          </Typography>
+          <TextField
+            required
+            id="company"
+            variant="outlined"
+            color="primary"
+            className={classes.field}
+            value={company}
+            onChange={handleCompanyChanged}
           />
         </span>
         <span className={classes.item}>
