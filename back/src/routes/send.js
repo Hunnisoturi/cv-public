@@ -3,9 +3,9 @@ const { transporter, getMessage } = require('../mailer');
 
 const router = express.Router();
 
-router.post('/', ({ body: { name, company, email } }, res) => {
+router.post('/', ({ body: { name, company, email, message } }, res) => {
   res.sendStatus(200);
-  transporter.sendMail(getMessage(name, company, email));
+  transporter.sendMail(getMessage(name, company, email, message));
 });
 
 module.exports = router;

@@ -65,6 +65,7 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
@@ -74,6 +75,7 @@ const Contact = () => {
   const handleNameChanged = event => setName(event.target.value);
   const handleCompanyChanged = event => setCompany(event.target.value);
   const handleEmailChanged = event => setEmail(event.target.value);
+  const handleMessageChanged = event => setMessage(event.target.value);
 
   const handleShow = () => setShow(true);
   const handleClose = (event, reason) => {
@@ -87,7 +89,7 @@ const Contact = () => {
   const handleHide = () => setOpen(false);
 
   const sendMail = () => {
-    API.send({ name, company, email })
+    API.send({ name, company, email, message })
       .then(() => {
         handleShow();
       })
@@ -99,6 +101,7 @@ const Contact = () => {
         setName('');
         setCompany('');
         setEmail('');
+        setMessage('');
       });
   };
 
@@ -154,6 +157,25 @@ const Contact = () => {
             onChange={handleEmailChanged}
           />
         </span>
+        <span className={classes.item}>
+          <Typography variant="h5" className={classes.label}>
+            <Trans i18nKey="formMessage" />
+          </Typography>
+          <TextField
+            inputProps={{
+              maxLength: 256,
+            }}
+            required
+            id="message"
+            variant="outlined"
+            color="primary"
+            multiline="true"
+            rows={5}
+            className={classes.field}
+            value={message}
+            onChange={handleMessageChanged}
+          />
+        </span>
         <Button
           variant="contained"
           size="large"
@@ -206,17 +228,17 @@ const Contact = () => {
           </Typography>
         </DialogTitle>
         <DialogContent>
-          <Typography variant="h5" color="secondary">
+          <Typography variant="h6" color="secondary">
             <Trans i18nKey="formName" />
-            {`: ${name}`}
+            {`:   ${name}`}
           </Typography>
-          <Typography variant="h5" color="secondary">
+          <Typography variant="h6" color="secondary">
             <Trans i18nKey="formCompany" />
-            {`: ${company}`}
+            {`:   ${company}`}
           </Typography>
-          <Typography variant="h5" color="secondary">
+          <Typography variant="h6" color="secondary">
             <Trans i18nKey="formEmail" />
-            {`: ${email}`}
+            {`:   ${email}`}
           </Typography>
         </DialogContent>
         <DialogActions>

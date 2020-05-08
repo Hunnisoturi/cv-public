@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const getMessage = (name, company, email) => {
+const getMessage = (name, company, email, msg) => {
   const message = {
     from: process.env.SMTP_USER_USERNAME,
     to: process.env.RECEPIENT_EMAIL,
@@ -21,6 +21,7 @@ const getMessage = (name, company, email) => {
           Nimi: <b>${name}</b><br/>
           Yritys: <b>${company}</b><br/>
           Sähköpostiosoite: <b>${email}</b><br/>
+          Viesti: <b>${msg}</b><br/>
           <br/>
           <b>MUISTA OTTAA YHTEYTTÄ<b/>`
   };

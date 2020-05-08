@@ -16,6 +16,7 @@
   "formName": "Nimi",
   "formCompany": "Yritys",
   "formEmail": "Sähköpostiosoite",
+  "formMessage": "Viesti",
   "headlineStart": "Kauniisti ",
   "headlineEnd": "kauniisti toteutettu",
   "home": "Etusivu",
