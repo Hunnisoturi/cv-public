@@ -53,6 +53,9 @@ const styles = makeStyles({
   pre: {
     whiteSpace: 'pre',
   },
+  subtitle: {
+    marginTop: '50px',
+  },
 });
 
 const icons = [
@@ -113,6 +116,9 @@ const Contact = () => {
     <div id="contact" className={classes.container}>
       <Typography variant="h3" className={classes.contact}>
         <Trans i18nKey="contact" />
+      </Typography>
+      <Typography variant="h5" color="secondary" className={classes.subtitle}>
+        <Trans i18nKey="contactSubtitle" />
       </Typography>
       <Container maxWidth="sm" className={classes.form}>
         <span className={classes.item}>

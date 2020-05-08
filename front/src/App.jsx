@@ -47,7 +47,7 @@ const styles = makeStyles({
 const App = () => {
   const classes = styles();
   return (
-    <div className={classes.root}>
+    <div id="home" className={classes.root}>
       <Header />
       <main>
         <Container maxWidth="xl" className={classes.mainGrid}>

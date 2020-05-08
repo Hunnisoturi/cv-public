@@ -50,7 +50,7 @@ const Header = () => {
           <Toolbar className={classes.toolbar}>
             <Logo height={100} />
             <Box className={classes.navi} component="nav">
-              <Link smooth to="/#root" className={classes.link}>
+              <Link smooth to="/#home" className={classes.link}>
                 <Button size="large" className={classes.button}>
                   <Typography component="h6">
                     <Box fontWeight={700}>
