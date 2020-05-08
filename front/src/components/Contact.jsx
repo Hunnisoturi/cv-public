@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, TextField, Button, Box, Snackbar, IconButton } from '@material-ui/core';
+import { Typography, TextField, Button, Box, Snackbar, IconButton, Container, Dialog, DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
 import API from '../services/api';
 
@@ -23,12 +23,11 @@ const styles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '50%',
     marginTop: '30px',
   },
   item: {
     marginTop: '30px',
-    width: '50%',
+    width: '100%',
   },
   field: {
     width: '100%',
@@ -51,6 +50,9 @@ const styles = makeStyles({
     marginLeft: '32px',
     marginRight: '32px',
   },
+  pre: {
+    whiteSpace: 'pre',
+  },
 });
 
 const icons = [
@@ -65,6 +67,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
 
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const { t } = useTranslation();
 
@@ -80,6 +83,9 @@ const Contact = () => {
     setShow(false);
   };
 
+  const handleOpen = () => setOpen(true);
+  const handleHide = () => setOpen(false);
+
   const sendMail = () => {
     API.send({ name, company, email })
       .then(() => {
@@ -89,6 +95,7 @@ const Contact = () => {
         console.error(error);
       })
       .finally(() => {
+        handleHide();
         setName('');
         setCompany('');
         setEmail('');
@@ -104,7 +111,7 @@ const Contact = () => {
       <Typography variant="h3" className={classes.contact}>
         <Trans i18nKey="contact" />
       </Typography>
-      <form className={classes.form}>
+      <Container maxWidth="sm" className={classes.form}>
         <span className={classes.item}>
           <Typography variant="h5" className={classes.label}>
             <Trans i18nKey="formName" />
@@ -152,7 +159,7 @@ const Contact = () => {
           size="large"
           color="primary"
           className={classes.send}
-          onClick={sendMail}
+          onClick={handleOpen}
           // disabled={disabled}
         >
           <Typography variant="h5">
@@ -166,7 +173,7 @@ const Contact = () => {
             <img alt="linkedin" src={linkedin} className={classes.icon} key={i} />
           ))}
         </span>
-      </form>
+      </Container>
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',
@@ -174,7 +181,7 @@ const Contact = () => {
         }}
         open={show}
         autoHideDuration={6000}
-        onCLose={handleClose}
+        onClose={handleClose}
         message={t('emailSent')}
         action={(
           <>
@@ -189,6 +196,42 @@ const Contact = () => {
           </>
         )}
       />
+      <Dialog
+        open={open}
+        onClose={handleHide}
+      >
+        <DialogTitle>
+          <Typography variant="h5" component="p">
+            <Trans i18nKey="sendDialogTitle" />
+          </Typography>
+        </DialogTitle>
+        <DialogContent>
+          <Typography variant="h5" color="secondary">
+            <Trans i18nKey="formName" />
+            {`: ${name}`}
+          </Typography>
+          <Typography variant="h5" color="secondary">
+            <Trans i18nKey="formCompany" />
+            {`: ${company}`}
+          </Typography>
+          <Typography variant="h5" color="secondary">
+            <Trans i18nKey="formEmail" />
+            {`: ${email}`}
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={sendMail} color="primary">
+            <Typography variant="h6">
+              <Trans i18nKey="yes" />
+            </Typography>
+          </Button>
+          <Button onClick={handleHide} color="primary">
+            <Typography variant="h6">
+              <Trans i18nKey="no" />
+            </Typography>
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };

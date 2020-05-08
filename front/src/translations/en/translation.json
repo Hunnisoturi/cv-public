@@ -9,8 +9,9 @@
   "cvCardHeader": "This website!",
   "cvCardSubtitle": "This site was built using react and Material UI.",
   "education": "Education",
-  "emailSent": "Email sent!",
+  "emailSent": "I'll be in touch shortly!",
   "design": "design",
+  "sendDialogTitle": "Are you sure you information is correct?",
   "footerMsg": "Designed and built by Aapo Attila",
   "formName": "Name",
   "formCompany": "Company",
@@ -20,6 +21,7 @@
   "home": "Home",
   "introText": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "language": "Suomeksi",
+  "no": "Cancel",
   "portfolio": "Portfolio",
   "projects": "Projects",
   "send": "Send",
@@ -27,5 +29,6 @@
   "technologies": "Technologies",
   "technologySubtitle": "The bigger the ball, the more confident I am with it!",
   "title": "Aapo Attila, Fullstack Developer",
+  "yes": "Yes",
   "whoami": "Who am I?"
 }

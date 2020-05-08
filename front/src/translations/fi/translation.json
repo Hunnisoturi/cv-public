@@ -9,8 +9,9 @@
   "cvCardHeader": "Tämä sivu!",
   "cvCardSubtitle": "Tämä sivu on rakennettu Reactilla ja Material UI:lla.",
   "education": "Koulutus",
-  "emailSent": "Viesti lähetetty!",
+  "emailSent": "Olen yhteydessä pian!",
   "design": "suunniteltu",
+  "sendDialogTitle": "Ovatko tietonne varmasti oikein?",
   "footerMsg": "Suunnittelija ja kehittäjä Aapo Attila",
   "formName": "Nimi",
   "formCompany": "Yritys",
@@ -20,6 +21,7 @@
   "home": "Etusivu",
   "introText": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
   "language": "In English",
+  "no": "Peruuta",
   "portfolio": "Portfolio",
   "projects": "Projektit",
   "selfDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
@@ -27,5 +29,6 @@
   "technologies": "Teknologiat",
   "technologySubtitle": "Mitä isompi pallo, sitä luottavaisempi olen osaamiseeni!",
   "title": "Aapo Attila, Fullstack kehittäjä",
+  "yes": "Kyllä",
   "whoami": "Kuka minä olen?"
 }
