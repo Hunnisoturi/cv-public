@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Trans } from 'react-i18next';
+import React, { useState, Fragment } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, TextField, Button, Box } from '@material-ui/core';
+import { Typography, TextField, Button, Box, Snackbar, IconButton } from '@material-ui/core';
+import { Close } from '@material-ui/icons';
 import API from '../services/api';
 
 import linkedin from '../assets/LinkedIn.png';
@@ -63,15 +64,34 @@ const Contact = () => {
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
 
+  const [show, setShow] = useState(false);
+
+  const { t } = useTranslation();
+
   const handleNameChanged = event => setName(event.target.value);
   const handleCompanyChanged = event => setCompany(event.target.value);
   const handleEmailChanged = event => setEmail(event.target.value);
 
+  const handleShow = () => setShow(true);
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setShow(false);
+  };
+
   const sendMail = () => {
     API.send({ name, company, email })
-      .then()
+      .then(() => {
+        handleShow();
+      })
       .catch(error => {
         console.error(error);
+      })
+      .finally(() => {
+        setName('');
+        setCompany('');
+        setEmail('');
       });
   };
 
@@ -147,6 +167,28 @@ const Contact = () => {
           ))}
         </span>
       </form>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        open={show}
+        autoHideDuration={6000}
+        onCLose={handleClose}
+        message={t('emailSent')}
+        action={(
+          <>
+            <IconButton
+              size="small"
+              aria-label="close"
+              color="primary"
+              onClick={handleClose}
+            >
+              <Close fontSize="small" />
+            </IconButton>
+          </>
+        )}
+      />
     </div>
   );
 };
