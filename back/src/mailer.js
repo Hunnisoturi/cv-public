@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 
 const getMessage = (name, company, email) => {
   const message = {
-    from: 'aapocvmailer@gmail.com',
+    from: process.env.SMTP_USER_USERNAME,
     to: process.env.RECEPIENT_EMAIL,
     subject: 'CV - Uusi yhteydenotto',
     html: `<p>Uusi yhteydenotto!<br/>
