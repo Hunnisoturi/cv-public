@@ -84,7 +84,7 @@ const Contact = () => {
       <Typography variant="h3" className={classes.contact}>
         <Trans i18nKey="contact" />
       </Typography>
-      <div className={classes.form}>
+      <form className={classes.form}>
         <span className={classes.item}>
           <Typography variant="h5" className={classes.label}>
             <Trans i18nKey="formName" />
@@ -146,7 +146,7 @@ const Contact = () => {
             <img alt="linkedin" src={linkedin} className={classes.icon} key={i} />
           ))}
         </span>
-      </div>
+      </form>
     </div>
   );
 };

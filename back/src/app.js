@@ -21,8 +21,6 @@ app.disable('x-powered-by');
 
 app.use('/send', sendRouter);
 
-app.get('/', (req, res) => res.send('Moro :D'));
-
 app.get('*', (_req, res) => res.status(404).end());
 
 app.listen(port, () => console.log(`Backend listening on port ${port}`));
