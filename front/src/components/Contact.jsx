@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, TextField, Button, Box } from '@material-ui/core';
+import API from '../services/api';
 
 import linkedin from '../assets/LinkedIn.png';
 
@@ -26,7 +27,7 @@ const styles = makeStyles({
   },
   item: {
     marginTop: '30px',
-    width: '60%',
+    width: '50%',
   },
   field: {
     width: '100%',
@@ -58,6 +59,24 @@ const icons = [
 ];
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [company, setCompany] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleNameChanged = event => setName(event.target.value);
+  const handleCompanyChanged = event => setCompany(event.target.value);
+  const handleEmailChanged = event => setEmail(event.target.value);
+
+  const sendMail = () => {
+    API.send({ name, company, email })
+      .then()
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  // const fieldsFilled = () => name && company && email;
+
   const classes = styles();
 
   return (
@@ -70,21 +89,52 @@ const Contact = () => {
           <Typography variant="h5" className={classes.label}>
             <Trans i18nKey="formName" />
           </Typography>
-          <TextField id="name" variant="outlined" color="primary" className={classes.field} />
+          <TextField
+            required
+            id="name"
+            variant="outlined"
+            color="primary"
+            className={classes.field}
+            value={name}
+            onChange={handleNameChanged}
+          />
         </span>
         <span className={classes.item}>
           <Typography variant="h5" className={classes.label}>
             <Trans i18nKey="formCompany" />
           </Typography>
-          <TextField id="company" variant="outlined" color="primary" className={classes.field} />
+          <TextField
+            required
+            id="company"
+            variant="outlined"
+            color="primary"
+            className={classes.field}
+            value={company}
+            onChange={handleCompanyChanged}
+          />
         </span>
         <span className={classes.item}>
           <Typography variant="h5" className={classes.label}>
             <Trans i18nKey="formEmail" />
           </Typography>
-          <TextField id="email" variant="outlined" color="primary" className={classes.field} />
+          <TextField
+            required
+            id="email"
+            variant="outlined"
+            color="primary"
+            className={classes.field}
+            value={email}
+            onChange={handleEmailChanged}
+          />
         </span>
-        <Button variant="contained" size="large" color="primary" className={classes.send}>
+        <Button
+          variant="contained"
+          size="large"
+          color="primary"
+          className={classes.send}
+          onClick={sendMail}
+          // disabled={disabled}
+        >
           <Typography variant="h5">
             <Box fontWeight={700}>
               <Trans i18nKey="send" />
