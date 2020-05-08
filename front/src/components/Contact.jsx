@@ -110,7 +110,7 @@ const Contact = () => {
   const classes = styles();
 
   return (
-    <div className={classes.container}>
+    <div id="contact" className={classes.container}>
       <Typography variant="h3" className={classes.contact}>
         <Trans i18nKey="contact" />
       </Typography>
@@ -169,7 +169,7 @@ const Contact = () => {
             id="message"
             variant="outlined"
             color="primary"
-            multiline="true"
+            multiline
             rows={5}
             className={classes.field}
             value={message}

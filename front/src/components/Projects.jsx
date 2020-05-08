@@ -2,8 +2,10 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Paper } from '@material-ui/core';
+import ArrowDown from './ArrowDown';
 
 import cvPhoto from '../assets/cvProject2x.jpg';
+
 
 const styles = makeStyles({
   paper: {
@@ -14,7 +16,6 @@ const styles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '150px',
   },
   gridContainer: {
     marginTop: '150px',
@@ -42,6 +43,9 @@ const styles = makeStyles({
   textContainer: {
     padding: '30px',
   },
+  headline: {
+    marginTop: '150px',
+  },
 });
 
 const projects = [
@@ -54,8 +58,9 @@ const Projects = () => {
   const classes = styles();
 
   return (
-    <div className={classes.container}>
-      <Typography variant="h3">
+    <div id="projects" className={classes.container}>
+      <ArrowDown />
+      <Typography variant="h3" className={classes.headline}>
         <Trans i18nKey="projects" />
       </Typography>
       <Grid container className={classes.gridContainer} justify="center">

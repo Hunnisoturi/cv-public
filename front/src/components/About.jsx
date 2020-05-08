@@ -8,7 +8,7 @@ import portrait from '../assets/portrait.jpg';
 
 const styles = makeStyles({
   avatar: {
-    marginTop: '150px',
+    marginTop: '100px',
     height: '300px',
     width: '300px',
   },
@@ -26,6 +26,9 @@ const styles = makeStyles({
     width: '100px',
     paddingBottom: '50px',
   },
+  nameText: {
+    marginTop: '30px',
+  },
 });
 
 const items = [
@@ -42,7 +45,10 @@ const About = () => {
       <Typography variant="h3">
         <Trans i18nKey="whoami" />
       </Typography>
-      <Avatar alt="Aapo Attila" src={portrait} height="" className={classes.avatar} />
+      <Avatar alt="Aapo Attila" src={portrait} className={classes.avatar} />
+      <Typography variant="h5" color="secondary" className={classes.nameText}>
+        <Trans i18nKey="name" />
+      </Typography>
       <Grid container className={classes.gridContainer}>
         {items.map(i => (
           <Grid item xs={4} key={i}>

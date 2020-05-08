@@ -81,7 +81,6 @@ const App = () => {
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
-          <ArrowDown />
           <Projects />
           <Divider orientation="horizontal" className={classes.divider} />
           <Technologies />
