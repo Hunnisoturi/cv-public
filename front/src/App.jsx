@@ -14,10 +14,10 @@ import Footer from './components/Footer';
 
 import { ReactComponent as Dots } from './assets/dots.svg';
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   root: {
+    width: '100%',
     height: '100%',
-    background: '#F5F5F5',
   },
   container: {
     marginBottom: '4rem',
@@ -42,54 +42,63 @@ const styles = makeStyles({
     justifyContent: 'center',
     marginTop: '150px',
   },
-});
+  headlineGrid: {
+    flexDirection: 'row',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column-reverse',
+      alignItems: 'center',
+    },
+  },
+}));
 
 const App = () => {
   const classes = styles();
   return (
-    <div id="home" className={classes.root}>
+    <Container id="home" maxWidth="xl" className={classes.root}>
       <Header />
-      <main>
-        <Container maxWidth="xl" className={classes.mainGrid}>
-          <Grid container direction="row">
-            <Grid
-              item
-              xs={6}
-              className={classes.headlineGridItem}
-            >
-              <Fade in timeout={1000}>
-                <div>
-                  <Headline />
-                </div>
-              </Fade>
+      <Container maxWidth="xl">
+        <main>
+          <Container maxWidth="xl" className={classes.mainGrid}>
+            <Grid container className={classes.headlineGrid}>
+              <Grid
+                item
+                xs={6}
+                className={classes.headlineGridItem}
+              >
+                <Fade in timeout={1000}>
+                  <div>
+                    <Headline />
+                  </div>
+                </Fade>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+                className={classes.headlineGridItem}
+              >
+                <Fade in timeout={1700}>
+                  <Dots />
+                </Fade>
+              </Grid>
             </Grid>
-            <Grid
-              item
-              xs={6}
-              className={classes.headlineGridItem}
-            >
-              <Fade in timeout={1700}>
-                <Dots />
-              </Fade>
-            </Grid>
-          </Grid>
-          <Fade in timeout={1700}>
-            <div>
-              <CallToAction />
-            </div>
-          </Fade>
-          <About />
-          <Divider orientation="horizontal" className={classes.divider} />
-          <Education />
-          <Projects />
-          <Divider orientation="horizontal" className={classes.divider} />
-          <Technologies />
-          <ArrowDown />
-        </Container>
-      </main>
+            <Fade in timeout={1700}>
+              <div>
+                <CallToAction />
+              </div>
+            </Fade>
+            <About />
+            <Divider orientation="horizontal" className={classes.divider} />
+            <Education />
+            <Projects />
+            <Divider orientation="horizontal" className={classes.divider} />
+            <Technologies />
+            <ArrowDown />
+          </Container>
+        </main>
+      </Container>
       <Contact />
       <Footer />
-    </div>
+    </Container>
   );
 };
 

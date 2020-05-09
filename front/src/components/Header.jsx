@@ -8,16 +8,18 @@ import { isFinnish } from '../utils/utils';
 
 import { ReactComponent as Logo } from '../assets/Logo.svg';
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   appbar: {
     background: '#F5F5F5',
     opacity: '98%',
   },
   toolbar: {
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
   logo: {
-    flexGrow: '1',
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
   },
   navi: {
     display: 'flex',
@@ -27,11 +29,15 @@ const styles = makeStyles({
     marginLeft: '12px',
     marginRight: '12px',
     fontWeight: 'bold',
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '6px',
+      marginRight: '6px',
+    },
   },
   link: {
     textDecoration: 'none',
   },
-});
+}));
 
 const Header = () => {
   const classes = styles();
@@ -44,14 +50,14 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <Container maxWidth="xl" component="header">
       <AppBar elevation={0} className={classes.appbar}>
         <Container maxWidth="xl">
-          <Toolbar className={classes.toolbar}>
-            <Logo height={100} />
+          <Toolbar className={classes.toolbar} disableGutters>
+            <Logo height={100} className={classes.logo} />
             <Box className={classes.navi} component="nav">
               <Link smooth to="/#home" className={classes.link}>
-                <Button size="large" className={classes.button}>
+                <Button className={classes.button}>
                   <Typography component="h6">
                     <Box fontWeight={700}>
                       <Trans i18nKey="home" />
@@ -60,7 +66,7 @@ const Header = () => {
                 </Button>
               </Link>
               <Link smooth to="/#projects" className={classes.link}>
-                <Button size="large" className={classes.button}>
+                <Button className={classes.button}>
                   <Typography component="h6">
                     <Box fontWeight={700}>
                       <Trans i18nKey="projects" />
@@ -69,7 +75,7 @@ const Header = () => {
                 </Button>
               </Link>
               <Link smooth to="/#contact" className={classes.link}>
-                <Button size="large" className={classes.button}>
+                <Button className={classes.button}>
                   <Typography component="h6">
                     <Box fontWeight={700}>
                       <Trans i18nKey="contact" />
@@ -78,7 +84,6 @@ const Header = () => {
                 </Button>
               </Link>
               <Button
-                size="large"
                 className={classes.button}
                 onClick={changeLanguage}
               >
@@ -92,7 +97,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-    </header>
+    </Container>
   );
 };
 

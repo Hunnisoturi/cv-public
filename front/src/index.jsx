@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { initReactI18next } from 'react-i18next';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import { ThemeProvider, createMuiTheme, responsiveFontSizes, CssBaseline } from '@material-ui/core';
 import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import translationsEN from './translations/en/translation.json';
@@ -13,7 +13,7 @@ import { register } from './serviceWorker';
 
 import 'typeface-nunito';
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
@@ -31,6 +31,8 @@ const theme = createMuiTheme({
     fontFamily: 'Nunito, Roboto',
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 i18next
   .use(initReactI18next)
@@ -62,6 +64,7 @@ i18next
 render(
   <Router>
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
     </ThemeProvider>
   </Router>,

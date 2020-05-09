@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ReactComponent as Bubbles } from '../assets/Technologies.svg';
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -15,11 +15,14 @@ const styles = makeStyles({
   },
   bubbles: {
     marginTop: '150px',
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
   },
   subtitle: {
     marginTop: '50px',
   },
-});
+}));
 
 const Technologies = () => {
   const classes = styles();

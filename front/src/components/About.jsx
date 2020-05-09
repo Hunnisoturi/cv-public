@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
-import { Avatar, Grid, Typography } from '@material-ui/core';
+import { Avatar, Grid, Typography, Container } from '@material-ui/core';
 import { Mood } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -29,6 +29,12 @@ const styles = makeStyles({
   nameText: {
     marginTop: '30px',
   },
+  element: {
+    minWidth: '400px',
+  },
+  text: {
+    width: '90%',
+  },
 });
 
 const items = [
@@ -41,7 +47,7 @@ const About = () => {
   const classes = styles();
 
   return (
-    <div className={classes.container}>
+    <Container maxWidth="xl" className={classes.container}>
       <Typography variant="h3">
         <Trans i18nKey="whoami" />
       </Typography>
@@ -49,14 +55,14 @@ const About = () => {
       <Typography variant="h5" color="secondary" className={classes.nameText}>
         <Trans i18nKey="name" />
       </Typography>
-      <Grid container className={classes.gridContainer}>
+      <Grid container className={classes.gridContainer} spacing={3} justify="center">
         {items.map(i => (
-          <Grid item xs={4} key={i}>
+          <Grid item xs={4} key={i} className={classes.element}>
             <Grid container direction="column" item alignItems="center">
               <Grid item xs={6}>
                 <Mood color="primary" className={classes.icon} />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} className={classes.text}>
                 <Typography variant="h5">
                   <Trans i18nKey="selfDescription" />
                 </Typography>
@@ -65,7 +71,7 @@ const About = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 

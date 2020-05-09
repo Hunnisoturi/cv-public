@@ -1,16 +1,18 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid, Paper } from '@material-ui/core';
+import { Typography, Grid, Paper, Container } from '@material-ui/core';
 import ArrowDown from './ArrowDown';
 
 import cvPhoto from '../assets/cvProject2x.jpg';
 
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   paper: {
     borderRadius: '25px',
     maxWidth: '420px',
+    minWidth: '350px',
+    overflow: 'hidden',
   },
   container: {
     display: 'flex',
@@ -19,6 +21,9 @@ const styles = makeStyles({
   },
   gridContainer: {
     marginTop: '150px',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
   },
   gridItem: {
     display: 'flex',
@@ -46,7 +51,7 @@ const styles = makeStyles({
   headline: {
     marginTop: '150px',
   },
-});
+}));
 
 const projects = [
   1,
@@ -58,12 +63,12 @@ const Projects = () => {
   const classes = styles();
 
   return (
-    <div id="projects" className={classes.container}>
+    <Container id="projects" maxWidth="xl" className={classes.container}>
       <ArrowDown />
       <Typography variant="h3" className={classes.headline}>
         <Trans i18nKey="projects" />
       </Typography>
-      <Grid container className={classes.gridContainer} justify="center">
+      <Grid container className={classes.gridContainer} justify="center" alignItems="center" spacing={3}>
         {projects.map(p => (
           <Grid item xs={4} className={classes.gridItem} key={p}>
             <Paper elevation={5} className={classes.paper}>
@@ -86,7 +91,7 @@ const Projects = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 
