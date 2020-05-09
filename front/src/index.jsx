@@ -26,7 +26,7 @@ let theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: 'Nunito, sans-serif',
+    fontFamily: 'Nunito',
   },
 });
 

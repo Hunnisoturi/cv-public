@@ -20,9 +20,6 @@ const styles = makeStyles(theme => ({
   dot: {
     display: 'flex',
     justifyContent: 'center',
-    // [theme.breakpoints.down('xs')]: {
-    //   display: 'none',
-    // },
   },
 }));
 

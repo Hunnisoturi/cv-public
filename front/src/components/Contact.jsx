@@ -91,7 +91,6 @@ const Contact = () => {
   const handleOpen = () => setOpen(true);
   const handleHide = () => setOpen(false);
 
-  const validate = () => !name && !company && !email;
 
   const sendMail = () => {
     API.send({ name, company, email, message })
@@ -191,7 +190,6 @@ const Contact = () => {
           color="primary"
           className={classes.send}
           onClick={handleOpen}
-          // disabled={validate}
         >
           <Typography variant="h5">
             <Box fontWeight={700}>
@@ -237,15 +235,15 @@ const Contact = () => {
           </Typography>
         </DialogTitle>
         <DialogContent>
-          <Typography variant="h6" color="secondary">
+          <Typography variant="h6" color="secondary" className={classes.pre}>
             <Trans i18nKey="formName" />
             {`:   ${name}`}
           </Typography>
-          <Typography variant="h6" color="secondary">
+          <Typography variant="h6" color="secondary" className={classes.pre}>
             <Trans i18nKey="formCompany" />
             {`:   ${company}`}
           </Typography>
-          <Typography variant="h6" color="secondary">
+          <Typography variant="h6" color="secondary" className={classes.pre}>
             <Trans i18nKey="formEmail" />
             {`:   ${email}`}
           </Typography>
