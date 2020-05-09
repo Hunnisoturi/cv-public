@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, makeStyles, Grid, Divider, Fade } from '@material-ui/core';
 import { withTranslation } from 'react-i18next';
+import { Spacers } from './utils/styles';
 import Header from './components/Header';
 import Headline from './components/Headline';
 import About from './components/About';
@@ -18,6 +19,9 @@ const styles = makeStyles(theme => ({
   root: {
     width: '100%',
     height: '100%',
+    [theme.breakpoints.down('xs')]: {
+      paddingBottom: '50px',
+    },
   },
   container: {
     marginBottom: '4rem',
@@ -27,6 +31,9 @@ const styles = makeStyles(theme => ({
   },
   mainGrid: {
     paddingTop: '300px',
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: Spacers.spacerMobile,
+    },
   },
   headlineGridItem: {
     display: 'flex',
@@ -48,6 +55,12 @@ const styles = makeStyles(theme => ({
       flexDirection: 'column-reverse',
       alignItems: 'center',
     },
+    dots: {
+      maxWidth: '562px',
+      [theme.breakpoints.down('xs')]: {
+        height: '180px',
+      },
+    },
   },
 }));
 
@@ -59,7 +72,7 @@ const App = () => {
       <Container maxWidth="xl">
         <main>
           <Container maxWidth="xl" className={classes.mainGrid}>
-            <Grid container className={classes.headlineGrid}>
+            <Grid container className={classes.headlineGrid} spacing={5}>
               <Grid
                 item
                 xs={6}
@@ -77,7 +90,7 @@ const App = () => {
                 className={classes.headlineGridItem}
               >
                 <Fade in timeout={1700}>
-                  <Dots />
+                  <Dots className={classes.dots} />
                 </Fade>
               </Grid>
             </Grid>

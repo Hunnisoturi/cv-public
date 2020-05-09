@@ -12,9 +12,21 @@ const styles = makeStyles(theme => ({
   appbar: {
     background: '#F5F5F5',
     opacity: '98%',
+    [theme.breakpoints.down('xs')]: {
+      position: 'fixed',
+      top: 'auto',
+      bottom: '0',
+      opacity: '100%',
+      background: theme.palette.primary.main,
+      height: '70px',
+    },
   },
   toolbar: {
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   logo: {
     [theme.breakpoints.down('xs')]: {
@@ -28,10 +40,9 @@ const styles = makeStyles(theme => ({
   button: {
     marginLeft: '12px',
     marginRight: '12px',
-    fontWeight: 'bold',
     [theme.breakpoints.down('xs')]: {
-      marginLeft: '6px',
-      marginRight: '6px',
+      marginLeft: '0px',
+      marginRight: '0px',
     },
   },
   link: {
