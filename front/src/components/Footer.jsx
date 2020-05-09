@@ -25,7 +25,7 @@ const Footer = () => {
   const classes = styles();
 
   return (
-    <footer className={classes.footer}>
+    <Container component="footer" maxWidth="xl" className={classes.footer}>
       <Container maxWidth="xl" className={classes.container}>
         <Typography variant="h5">
           <Trans i18nKey="footerMsg" />
@@ -34,7 +34,7 @@ const Footer = () => {
           <Trans i18nKey="copyright" />
         </Typography>
       </Container>
-    </footer>
+    </Container>
   );
 };
 

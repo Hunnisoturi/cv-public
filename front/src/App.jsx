@@ -17,10 +17,13 @@ import { ReactComponent as Dots } from './assets/dots.svg';
 
 const styles = makeStyles(theme => ({
   root: {
-    width: '100%',
+    width: '100vw',
     height: '100%',
     [theme.breakpoints.down('xs')]: {
       paddingBottom: '50px',
+    },
+    [theme.breakpoints.down('lg')]: {
+      margin: '0px',
     },
   },
   container: {
@@ -69,46 +72,44 @@ const App = () => {
   return (
     <Container id="home" maxWidth="xl" className={classes.root}>
       <Header />
-      <Container maxWidth="xl">
-        <main>
-          <Container maxWidth="xl" className={classes.mainGrid}>
-            <Grid container className={classes.headlineGrid} spacing={5}>
-              <Grid
-                item
-                xs={6}
-                className={classes.headlineGridItem}
-              >
-                <Fade in timeout={1000}>
-                  <div>
-                    <Headline />
-                  </div>
-                </Fade>
-              </Grid>
-              <Grid
-                item
-                xs={6}
-                className={classes.headlineGridItem}
-              >
-                <Fade in timeout={1700}>
-                  <Dots className={classes.dots} />
-                </Fade>
-              </Grid>
+      <main>
+        <Container maxWidth="xl" className={classes.mainGrid}>
+          <Grid container className={classes.headlineGrid} spacing={5}>
+            <Grid
+              item
+              xs={6}
+              className={classes.headlineGridItem}
+            >
+              <Fade in timeout={1000}>
+                <div>
+                  <Headline />
+                </div>
+              </Fade>
             </Grid>
-            <Fade in timeout={1700}>
-              <div>
-                <CallToAction />
-              </div>
-            </Fade>
-            <About />
-            <Divider orientation="horizontal" className={classes.divider} />
-            <Education />
-            <Projects />
-            <Divider orientation="horizontal" className={classes.divider} />
-            <Technologies />
-            <ArrowDown />
-          </Container>
-        </main>
-      </Container>
+            <Grid
+              item
+              xs={6}
+              className={classes.headlineGridItem}
+            >
+              <Fade in timeout={1700}>
+                <Dots className={classes.dots} />
+              </Fade>
+            </Grid>
+          </Grid>
+          <Fade in timeout={1700}>
+            <div>
+              <CallToAction />
+            </div>
+          </Fade>
+          <About />
+          <Divider orientation="horizontal" className={classes.divider} />
+          <Education />
+          <Projects />
+          <Divider orientation="horizontal" className={classes.divider} />
+          <Technologies />
+          <ArrowDown />
+        </Container>
+      </main>
       <Contact />
       <Footer />
     </Container>

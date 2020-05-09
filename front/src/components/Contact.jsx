@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, TextField, Button, Box, Snackbar, IconButton, Container, Dialog, DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
+import { Typography, TextField, Button, Box, Container, Dialog, DialogTitle, DialogContent, DialogActions, Snackbar, IconButton } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
 import API from '../services/api';
 
@@ -91,6 +91,8 @@ const Contact = () => {
   const handleOpen = () => setOpen(true);
   const handleHide = () => setOpen(false);
 
+  const validate = () => !name && !company && !email;
+
   const sendMail = () => {
     API.send({ name, company, email, message })
       .then(() => {
@@ -108,12 +110,10 @@ const Contact = () => {
       });
   };
 
-  // const fieldsFilled = () => name && company && email;
-
   const classes = styles();
 
   return (
-    <div id="contact" className={classes.container}>
+    <Container id="contact" maxWidth="xl" className={classes.container}>
       <Typography variant="h3" className={classes.contact}>
         <Trans i18nKey="contact" />
       </Typography>
@@ -128,6 +128,7 @@ const Contact = () => {
           <TextField
             required
             id="name"
+            label="name"
             variant="outlined"
             color="primary"
             className={classes.field}
@@ -142,6 +143,7 @@ const Contact = () => {
           <TextField
             required
             id="email"
+            label="email"
             variant="outlined"
             color="primary"
             className={classes.field}
@@ -156,6 +158,7 @@ const Contact = () => {
           <TextField
             required
             id="company"
+            label="company"
             variant="outlined"
             color="primary"
             className={classes.field}
@@ -171,8 +174,8 @@ const Contact = () => {
             inputProps={{
               maxLength: 256,
             }}
-            required
             id="message"
+            label="message"
             variant="outlined"
             color="primary"
             multiline
@@ -188,7 +191,7 @@ const Contact = () => {
           color="primary"
           className={classes.send}
           onClick={handleOpen}
-          // disabled={disabled}
+          // disabled={validate}
         >
           <Typography variant="h5">
             <Box fontWeight={700}>
@@ -260,7 +263,7 @@ const Contact = () => {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </Container>
   );
 };
 

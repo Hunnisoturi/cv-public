@@ -5,19 +5,26 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { ReactComponent as EduDot } from '../assets/dotWhite.svg';
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   container: {
     marginTop: '150px',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
   dotText: {
     position: 'relative',
-    bottom: '255px',
+    bottom: '50%',
   },
   dot: {
     display: 'flex',
     justifyContent: 'center',
+    // [theme.breakpoints.down('xs')]: {
+    //   display: 'none',
+    // },
   },
-});
+}));
 
 const schools = [
   1,
@@ -29,8 +36,8 @@ const Education = () => {
 
   return (
     <Container maxWidth="xl">
-      <Grid container direction="row" justify="center" className={classes.container}>
-        <Grid item xs={6} className={classes.dot}>
+      <Grid container direction="row" justify="center" className={classes.container} spacing={5}>
+        <Grid item className={classes.dot}>
           <div>
             <EduDot />
             <div className={classes.dotText}>
@@ -40,9 +47,9 @@ const Education = () => {
             </div>
           </div>
         </Grid>
-        <Grid container direction="column" item xs={6} alignItems="center">
+        <Grid container direction="column" item xs alignItems="center">
           {schools.map(s => (
-            <Grid container direction="column" item xs={6} justify="center" key={s}>
+            <Grid container direction="column" item xs justify="center" key={s}>
               <Grid item>
                 <Typography variant="h5">
                   <Trans i18nKey="amk" />

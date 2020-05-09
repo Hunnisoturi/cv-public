@@ -10,8 +10,8 @@ import cvPhoto from '../assets/cvProject2x.jpg';
 const styles = makeStyles(theme => ({
   paper: {
     borderRadius: '25px',
-    maxWidth: '420px',
-    minWidth: '350px',
+    width: '82%',
+    minWidth: '360px',
     overflow: 'hidden',
   },
   container: {
@@ -21,17 +21,18 @@ const styles = makeStyles(theme => ({
   },
   gridContainer: {
     marginTop: '150px',
-    [theme.breakpoints.down('xs')]: {
-      flexDirection: 'column',
-    },
+    width: '100%',
+    // [theme.breakpoints.down('xs')]: {
+    //   flexDirection: 'column',
+    // },
   },
   gridItem: {
+    minWidth: '440px',
     display: 'flex',
     justifyContent: 'center',
   },
   image: {
-    width: '420px',
-    height: '263px',
+    width: '100%',
     borderRadius: '25px 25px 0px 0px',
   },
   imageContainer: {
@@ -68,7 +69,7 @@ const Projects = () => {
       <Typography variant="h3" className={classes.headline}>
         <Trans i18nKey="projects" />
       </Typography>
-      <Grid container className={classes.gridContainer} justify="center" alignItems="center" spacing={3}>
+      <Grid container className={classes.gridContainer} justify="center" alignItems="center" spacing={10}>
         {projects.map(p => (
           <Grid item xs={4} className={classes.gridItem} key={p}>
             <Paper elevation={5} className={classes.paper}>

@@ -18,7 +18,6 @@ const styles = makeStyles(theme => ({
       bottom: '0',
       opacity: '100%',
       background: theme.palette.primary.main,
-      height: '70px',
     },
   },
   toolbar: {

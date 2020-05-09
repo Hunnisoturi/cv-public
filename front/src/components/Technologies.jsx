@@ -15,8 +15,9 @@ const styles = makeStyles(theme => ({
   },
   bubbles: {
     marginTop: '150px',
-    [theme.breakpoints.down('xs')]: {
-      display: 'none',
+    width: '70%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
     },
   },
   subtitle: {

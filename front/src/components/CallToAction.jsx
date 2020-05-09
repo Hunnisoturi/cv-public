@@ -3,16 +3,20 @@ import { Trans } from 'react-i18next';
 import { Typography } from '@material-ui/core';
 import { KeyboardArrowDown } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
+import { Spacers } from '../utils/styles';
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   scrollDown: {
     marginTop: '350px',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: Spacers.spacerMobile,
+    },
   },
   icon: {
     display: 'flex',
     justifyContent: 'center',
   },
-});
+}));
 
 const CallToAction = () => {
   const classes = styles();

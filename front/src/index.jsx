@@ -11,8 +11,6 @@ import translationCommon from './translations/common.json';
 import App from './App';
 import { register } from './serviceWorker';
 
-import 'typeface-nunito';
-
 let theme = createMuiTheme({
   palette: {
     type: 'light',
@@ -28,7 +26,7 @@ let theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: 'Nunito, Roboto',
+    fontFamily: 'Nunito, sans-serif',
   },
 });
 
