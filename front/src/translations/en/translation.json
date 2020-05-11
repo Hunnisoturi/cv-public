@@ -18,6 +18,7 @@
   "formCompany": "Organization",
   "formEmail": "Email address",
   "formMessage": "Message",
+  "formError": "Please fill the required fields marked with *",
   "headlineStart": "Beautiful ",
   "headlineEnd": "beautiful execution",
   "home": "Home",

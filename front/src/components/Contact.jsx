@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, TextField, Button, Box, Container, Dialog, DialogTitle, DialogContent, DialogActions, Snackbar, IconButton } from '@material-ui/core';
+import
+{ Typography,
+  TextField,
+  Button,
+  Box,
+  Container,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Snackbar,
+  IconButton,
+} from '@material-ui/core';
 import { Close } from '@material-ui/icons';
+import { Alert } from '@material-ui/lab';
 import API from '../services/api';
 
 import linkedin from '../assets/LinkedIn.png';
@@ -72,6 +85,7 @@ const Contact = () => {
 
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
+  const [openError, setOpenError] = useState(false);
 
   const { t } = useTranslation();
 
@@ -91,6 +105,21 @@ const Contact = () => {
   const handleOpen = () => setOpen(true);
   const handleHide = () => setOpen(false);
 
+  const handleShowError = () => setOpenError(true);
+  const handleCloseError = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenError(false);
+  };
+
+  const validate = () => {
+    if (name.length !== 0 && company.length !== 0 && email.length !== 0) {
+      handleOpen();
+    } else {
+      handleShowError();
+    }
+  };
 
   const sendMail = () => {
     API.send({ name, company, email, message })
@@ -189,7 +218,7 @@ const Contact = () => {
           size="large"
           color="primary"
           className={classes.send}
-          onClick={handleOpen}
+          onClick={validate}
         >
           <Typography variant="h5">
             <Box fontWeight={700}>
@@ -225,6 +254,33 @@ const Contact = () => {
           </>
         )}
       />
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        open={openError}
+        onClose={handleCloseError}
+      >
+        <Alert
+          severity="error"
+          variant="filled"
+          action={(
+            <>
+              <IconButton
+                size="small"
+                aria-label="close"
+                color="black"
+                onClick={handleCloseError}
+              >
+                <Close fontSize="small" />
+              </IconButton>
+            </>
+          )}
+        >
+          <Trans i18nKey="formError" />
+        </Alert>
+      </Snackbar>
       <Dialog
         open={open}
         onClose={handleHide}
