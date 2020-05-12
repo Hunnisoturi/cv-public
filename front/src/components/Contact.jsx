@@ -13,6 +13,7 @@ import
   DialogActions,
   Snackbar,
   IconButton,
+  Link,
 } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
@@ -156,7 +157,7 @@ const Contact = () => {
           <TextField
             required
             id="name"
-            label="name"
+            label={t('formName')}
             variant="outlined"
             color="primary"
             className={classes.field}
@@ -171,7 +172,7 @@ const Contact = () => {
           <TextField
             required
             id="email"
-            label="email"
+            label={t('formEmail')}
             variant="outlined"
             color="primary"
             className={classes.field}
@@ -186,7 +187,7 @@ const Contact = () => {
           <TextField
             required
             id="company"
-            label="company"
+            label={t('formCompany')}
             variant="outlined"
             color="primary"
             className={classes.field}
@@ -203,7 +204,7 @@ const Contact = () => {
               maxLength: 256,
             }}
             id="message"
-            label="message"
+            label={t('formMessage')}
             variant="outlined"
             color="primary"
             multiline
@@ -228,7 +229,11 @@ const Contact = () => {
         </Button>
         <span className={classes.icons}>
           {icons.map(i => (
-            <img alt="linkedin" src={linkedin} className={classes.icon} key={i} />
+            <IconButton>
+              <Link href="https://www.linkedin.com/in/aapo-attila-9203111a1/" target="_blank">
+                <img alt="linkedin" src={linkedin} className={classes.icon} key={i} />
+              </Link>
+            </IconButton>
           ))}
         </span>
       </Container>
