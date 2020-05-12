@@ -34,7 +34,7 @@ const Education = () => {
   return (
     <Container maxWidth="xl">
       <Grid container direction="row" justify="center" className={classes.container} spacing={5}>
-        <Grid item className={classes.dot}>
+        <Grid item className={classes.dot} xs>
           <div>
             <EduDot />
             <div className={classes.dotText}>
@@ -44,7 +44,7 @@ const Education = () => {
             </div>
           </div>
         </Grid>
-        <Grid container direction="column" item xs alignItems="center">
+        <Grid container direction="column" item xs={6} alignItems="center">
           {schools.map(s => (
             <Grid container direction="column" item xs justify="center" key={s}>
               <Grid item>

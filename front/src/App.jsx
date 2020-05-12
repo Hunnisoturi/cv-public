@@ -34,6 +34,9 @@ const styles = makeStyles(theme => ({
   },
   mainGrid: {
     paddingTop: '300px',
+    [theme.breakpoints.down('lg')]: {
+      paddingTop: Spacers.spacerMobile,
+    },
     [theme.breakpoints.down('xs')]: {
       paddingTop: Spacers.spacerMobile,
     },

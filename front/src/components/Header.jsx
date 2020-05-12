@@ -10,6 +10,7 @@ import { ReactComponent as Logo } from '../assets/Logo.svg';
 
 const styles = makeStyles(theme => ({
   appbar: {
+    width: '100%',
     background: '#F5F5F5',
     opacity: '98%',
     [theme.breakpoints.down('xs')]: {

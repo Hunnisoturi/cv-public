@@ -7,11 +7,12 @@ import ArrowDown from './ArrowDown';
 import cvPhoto from '../assets/cvProject2x.jpg';
 
 
-const styles = makeStyles(theme => ({
+const styles = makeStyles({
   paper: {
     borderRadius: '25px',
     width: '82%',
     minWidth: '360px',
+    maxHeight: '485px',
     overflow: 'hidden',
   },
   container: {
@@ -22,9 +23,6 @@ const styles = makeStyles(theme => ({
   gridContainer: {
     marginTop: '150px',
     width: '100%',
-    // [theme.breakpoints.down('xs')]: {
-    //   flexDirection: 'column',
-    // },
   },
   gridItem: {
     minWidth: '440px',
@@ -52,7 +50,7 @@ const styles = makeStyles(theme => ({
   headline: {
     marginTop: '150px',
   },
-}));
+});
 
 const projects = [
   1,
@@ -64,9 +62,9 @@ const Projects = () => {
   const classes = styles();
 
   return (
-    <Container id="projects" maxWidth="xl" className={classes.container}>
+    <Container maxWidth="xl" className={classes.container}>
       <ArrowDown />
-      <Typography variant="h3" className={classes.headline}>
+      <Typography variant="h3" className={classes.headline} id="projects">
         <Trans i18nKey="projects" />
       </Typography>
       <Grid container className={classes.gridContainer} justify="center" alignItems="center" spacing={10}>

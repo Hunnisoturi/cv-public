@@ -11,11 +11,13 @@ import translationCommon from './translations/common.json';
 import App from './App';
 import { register } from './serviceWorker';
 
+require('typeface-nunito');
+
 let theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      main: '#D38A51',
+      main: '#ea6227',
     },
     secondary: {
       main: '#434343',

@@ -54,6 +54,7 @@ const About = () => {
       <Avatar alt="Aapo Attila" src={portrait} className={classes.avatar} />
       <Typography variant="h5" color="secondary" className={classes.nameText}>
         <Trans i18nKey="name" />
+        <Trans i18nKey="age" />
       </Typography>
       <Grid container className={classes.gridContainer} spacing={3} justify="center">
         {items.map(i => (

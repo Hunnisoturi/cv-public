@@ -10,6 +10,7 @@ const styles = makeStyles({
     alignItems: 'center',
     background: '#F5F5F5',
     width: '100%',
+    textAlign: 'center',
   },
   container: {
     display: 'flex',
