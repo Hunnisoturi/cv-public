@@ -3,6 +3,7 @@ import { Trans } from 'react-i18next';
 import { Typography, Grid, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Spacers } from '../utils/styles';
+import { educations } from '../utils/data';
 
 import { ReactComponent as EduDot } from '../assets/dotWhite.svg';
 
@@ -33,11 +34,6 @@ const styles = makeStyles(theme => ({
   },
 }));
 
-const schools = [
-  1,
-  2,
-];
-
 const Education = () => {
   const classes = styles();
 
@@ -55,14 +51,14 @@ const Education = () => {
           </div>
         </Grid>
         <Grid container direction="column" item xs alignItems="center">
-          {schools.map(s => (
-            <Grid container direction="column" item xs justify="center" key={s} spacing={5} className={classes.item}>
+          {educations.map(s => (
+            <Grid container direction="column" item xs justify="center" key={s.name} spacing={5} className={classes.item}>
               <Grid item>
                 <Typography variant="h5">
-                  <Trans i18nKey="amk" />
+                  <Trans i18nKey={s.name} />
                 </Typography>
                 <Typography variant="h6" color="secondary">
-                  <Trans i18nKey="amkPlaceAndTime" />
+                  <Trans i18nKey={s.subtitle} />
                 </Typography>
               </Grid>
             </Grid>

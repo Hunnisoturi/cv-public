@@ -4,6 +4,7 @@ import { Avatar, Grid, Typography, Container } from '@material-ui/core';
 import { Mood } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { Spacers } from '../utils/styles';
+import { about } from '../utils/data';
 
 import portrait from '../assets/portrait.jpg';
 
@@ -45,12 +46,6 @@ const styles = makeStyles(theme => ({
   },
 }));
 
-const items = [
-  1,
-  2,
-  3,
-];
-
 const About = () => {
   const classes = styles();
 
@@ -65,15 +60,15 @@ const About = () => {
         <Trans i18nKey="age" />
       </Typography>
       <Grid container className={classes.gridContainer} spacing={3} justify="center">
-        {items.map(i => (
-          <Grid item xs={4} key={i} className={classes.element}>
+        {about.map(i => (
+          <Grid item xs={4} key={i.name} className={classes.element}>
             <Grid container direction="column" item alignItems="center">
               <Grid item xs={6}>
                 <Mood color="primary" className={classes.icon} />
               </Grid>
               <Grid item xs={12} className={classes.text}>
                 <Typography variant="h5">
-                  <Trans i18nKey="selfDescription" />
+                  <Trans i18nKey={i.subtitle} />
                 </Typography>
               </Grid>
             </Grid>

@@ -3,6 +3,7 @@ import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Paper, Container } from '@material-ui/core';
 import { Spacers } from '../utils/styles';
+import { projects } from '../utils/data';
 import ArrowDown from './ArrowDown';
 
 import cvPhoto from '../assets/cvProject2x.jpg';
@@ -59,12 +60,6 @@ const styles = makeStyles(theme => ({
   },
 }));
 
-const projects = [
-  1,
-  2,
-  3,
-];
-
 const Projects = () => {
   const classes = styles();
 
@@ -76,19 +71,19 @@ const Projects = () => {
       </Typography>
       <Grid container className={classes.gridContainer} justify="center" alignItems="center" spacing={10}>
         {projects.map(p => (
-          <Grid item xs={4} className={classes.gridItem} key={p}>
+          <Grid item xs={4} className={classes.gridItem} key={p.name}>
             <Paper elevation={5} className={classes.paper}>
               <Grid container direction="column">
                 <Grid item xs>
                   <div className={classes.imageContainer}>
-                    <img alt="Project" src={cvPhoto} className={classes.image} />
+                    <img alt="Project" src={p.image} className={classes.image} />
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="h4" className={classes.header}>
-                      <Trans i18nKey="cvCardHeader" />
+                      <Trans i18nKey={p.name} />
                     </Typography>
                     <Typography variant="h5" color="secondary" className={classes.subtitle}>
-                      <Trans i18nKey="cvCardSubtitle" />
+                      <Trans i18nKey={p.subtitle} />
                     </Typography>
                   </div>
                 </Grid>
