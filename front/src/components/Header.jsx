@@ -15,10 +15,9 @@ const styles = makeStyles(theme => ({
     opacity: '98%',
     [theme.breakpoints.down('xs')]: {
       position: 'fixed',
-      top: 'auto',
-      bottom: '0',
+      top: '0',
+      bottom: 'auto',
       opacity: '100%',
-      background: theme.palette.primary.main,
     },
   },
   toolbar: {

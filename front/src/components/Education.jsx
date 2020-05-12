@@ -44,7 +44,7 @@ const Education = () => {
             </div>
           </div>
         </Grid>
-        <Grid container direction="column" item xs={6} alignItems="center">
+        <Grid container direction="column" item xs alignItems="center">
           {schools.map(s => (
             <Grid container direction="column" item xs justify="center" key={s}>
               <Grid item>

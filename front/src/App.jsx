@@ -33,7 +33,7 @@ const styles = makeStyles(theme => ({
     marginTop: '150px',
   },
   mainGrid: {
-    paddingTop: '300px',
+    paddingTop: '350px',
     [theme.breakpoints.down('lg')]: {
       paddingTop: Spacers.spacerMobile,
     },
