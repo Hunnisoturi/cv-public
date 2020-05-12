@@ -54,9 +54,9 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
-    link: {
-      textDecoration: 'none',
-    },
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));
 
@@ -80,7 +80,7 @@ const Projects = () => {
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="h4" className={classes.header}>
-                      <Link href={p.link} className={classes.link} target="_blank" color="textPrimary">
+                      <Link href={p.link ? p.link : '#projects'} target="_blank" underline="none" color="textPrimary">
                         <Trans i18nKey={p.name} />
                       </Link>
                     </Typography>

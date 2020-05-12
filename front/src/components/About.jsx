@@ -31,8 +31,8 @@ const styles = makeStyles(theme => ({
     },
   },
   icon: {
-    height: '100px',
-    width: '100px',
+    height: '150px',
+    width: '150px',
     paddingBottom: '50px',
   },
   nameText: {

@@ -1,5 +1,6 @@
 import cv from '../assets/cvProject@2x.jpg';
 import acs from '../assets/acs@2x.jpg';
+import more from '../assets/dank@2x.jpg';
 
 export const educations = [
   {
@@ -7,7 +8,7 @@ export const educations = [
     subtitle: 'amkPlaceAndTime',
   },
   {
-    name: 'amk',
+    name: 'highSchool',
     subtitle: 'amkPlaceAndTime',
   },
 ];
@@ -40,8 +41,8 @@ export const projects = [
     subtitle: 'acsCardSubtitle',
   },
   {
-    image: cv,
-    name: 'cvCardHeader',
-    subtitle: 'cvCardSubtitle',
+    image: more,
+    name: 'thirdCardHeader',
+    subtitle: 'thirdCardSubtitle',
   },
 ];

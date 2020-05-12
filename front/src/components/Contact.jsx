@@ -228,13 +228,11 @@ const Contact = () => {
           </Typography>
         </Button>
         <span className={classes.icons}>
-          {icons.map(i => (
-            <IconButton>
-              <Link href="https://www.linkedin.com/in/aapo-attila-9203111a1/" target="_blank">
-                <img alt="linkedin" src={linkedin} className={classes.icon} key={i} />
-              </Link>
-            </IconButton>
-          ))}
+          <IconButton>
+            <Link href="https://www.linkedin.com/in/aapo-attila-9203111a1/" target="_blank">
+              <img alt="linkedin" src={linkedin} className={classes.icon} />
+            </Link>
+          </IconButton>
         </span>
       </Container>
       <Snackbar
