@@ -2,12 +2,13 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Paper, Container } from '@material-ui/core';
+import { Spacers } from '../utils/styles';
 import ArrowDown from './ArrowDown';
 
 import cvPhoto from '../assets/cvProject2x.jpg';
 
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   paper: {
     borderRadius: '25px',
     width: '82%',
@@ -21,8 +22,11 @@ const styles = makeStyles({
     alignItems: 'center',
   },
   gridContainer: {
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
     width: '100%',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: Spacers.spacerMobile,
+    },
   },
   gridItem: {
     minWidth: '440px',
@@ -48,9 +52,12 @@ const styles = makeStyles({
     padding: '30px',
   },
   headline: {
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
+    [theme.breakpoints.down('xs')]: {
+      marginTop: Spacers.spacerMobile,
+    },
   },
-});
+}));
 
 const projects = [
   1,

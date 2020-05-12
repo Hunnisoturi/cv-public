@@ -30,15 +30,18 @@ const styles = makeStyles(theme => ({
     marginBottom: '4rem',
   },
   divider: {
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
+    [theme.breakpoints.down('xs')]: {
+      marginTop: Spacers.spacerMobile,
+    },
   },
   mainGrid: {
-    paddingTop: '350px',
+    paddingTop: Spacers.headerDesktop,
     [theme.breakpoints.down('lg')]: {
-      paddingTop: Spacers.spacerMobile,
+      paddingTop: Spacers.headerMedium,
     },
     [theme.breakpoints.down('xs')]: {
-      paddingTop: Spacers.spacerMobile,
+      paddingTop: Spacers.headerMobile,
     },
   },
   headlineGridItem: {
@@ -53,7 +56,7 @@ const styles = makeStyles(theme => ({
   arrowSpan: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
   },
   headlineGrid: {
     flexDirection: 'row',

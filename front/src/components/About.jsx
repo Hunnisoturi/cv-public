@@ -3,14 +3,19 @@ import { Trans } from 'react-i18next';
 import { Avatar, Grid, Typography, Container } from '@material-ui/core';
 import { Mood } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
+import { Spacers } from '../utils/styles';
 
 import portrait from '../assets/portrait.jpg';
 
-const styles = makeStyles({
+const styles = makeStyles(theme => ({
   avatar: {
     marginTop: '100px',
     height: '300px',
     width: '300px',
+    [theme.breakpoints.down('xs')]: {
+      height: '180px',
+      width: '180px',
+    },
   },
   container: {
     display: 'flex',
@@ -19,7 +24,10 @@ const styles = makeStyles({
     paddingTop: '100px',
   },
   gridContainer: {
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
+    [theme.breakpoints.down('xs')]: {
+      marginTop: Spacers.spacerMobile,
+    },
   },
   icon: {
     height: '100px',
@@ -35,7 +43,7 @@ const styles = makeStyles({
   text: {
     width: '80%',
   },
-});
+}));
 
 const items = [
   1,

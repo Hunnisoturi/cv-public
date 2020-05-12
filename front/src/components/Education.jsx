@@ -2,15 +2,17 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import { Typography, Grid, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Spacers } from '../utils/styles';
 
 import { ReactComponent as EduDot } from '../assets/dotWhite.svg';
 
 const styles = makeStyles(theme => ({
   container: {
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       alignItems: 'center',
+      marginTop: Spacers.spacerMobile,
     },
   },
   dotText: {
@@ -20,6 +22,14 @@ const styles = makeStyles(theme => ({
   dot: {
     display: 'flex',
     justifyContent: 'center',
+    [theme.breakpoints.down('xs')]: {
+      width: '80%',
+    },
+  },
+  item: {
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: '30px',
+    },
   },
 }));
 
@@ -46,7 +56,7 @@ const Education = () => {
         </Grid>
         <Grid container direction="column" item xs alignItems="center">
           {schools.map(s => (
-            <Grid container direction="column" item xs justify="center" key={s}>
+            <Grid container direction="column" item xs justify="center" key={s} spacing={5} className={classes.item}>
               <Grid item>
                 <Typography variant="h5">
                   <Trans i18nKey="amk" />

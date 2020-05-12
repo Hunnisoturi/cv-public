@@ -2,6 +2,7 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import { Typography } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import { Spacers } from '../utils/styles';
 
 import { ReactComponent as Bubbles } from '../assets/Technologies.svg';
 
@@ -11,10 +12,13 @@ const styles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
+    [theme.breakpoints.down('xs')]: {
+      marginTop: Spacers.spacerMobile,
+    },
   },
   bubbles: {
-    marginTop: '150px',
+    marginTop: Spacers.spacerDesktop,
     width: '70%',
     [theme.breakpoints.down('sm')]: {
       width: '100%',

@@ -7,12 +7,12 @@ import { Spacers } from '../utils/styles';
 
 const styles = makeStyles(theme => ({
   scrollDown: {
-    marginTop: '250px',
+    marginTop: '350px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
     [theme.breakpoints.down('lg')]: {
-      marginTop: '100px',
+      marginTop: Spacers.spacerDesktop,
     },
   },
   icon: {

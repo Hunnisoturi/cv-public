@@ -8,6 +8,10 @@ const styles = makeStyles({
     display: 'inline-block',
     whiteSpace: 'pre',
   },
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+  },
 });
 
 const Headline = () => {
