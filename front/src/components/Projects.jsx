@@ -6,9 +6,6 @@ import { Spacers } from '../utils/styles';
 import { projects } from '../utils/data';
 import ArrowDown from './ArrowDown';
 
-import cvPhoto from '../assets/cvProject2x.jpg';
-
-
 const styles = makeStyles(theme => ({
   paper: {
     borderRadius: '25px',
