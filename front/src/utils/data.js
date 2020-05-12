@@ -1,3 +1,5 @@
-export const about {
-  
+export const educations = {
+  AMK: {
+    
+  },
 };
