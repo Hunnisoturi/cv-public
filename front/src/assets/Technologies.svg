@@ -21,7 +21,7 @@
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Ellipse_7-4" x="200" y="78" width="170" height="170" filterUnits="userSpaceOnUse">
+    <filter id="Ellipse_7-4" x="200" y="78" width="140" height="140" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-4"/>
       <feFlood flood-opacity="0.161"/>
@@ -70,82 +70,94 @@
       <feComposite operator="in" in2="blur-10"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Ellipse_7-11" x="966" y="114" width="76" height="73" filterUnits="userSpaceOnUse">
+    <filter id="Ellipse_7-11" x="609" y="384" width="98" height="98" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-11"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-11"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="Ellipse_7-12" x="966" y="114" width="76" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-12"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
   <g id="Tehnologies" transform="translate(-415 -4157)">
     <g id="C_" data-name="C++" transform="translate(124 98)">
       <g transform="matrix(1, 0, 0, 1, 291, 4059)" filter="url(#Ellipse_7)">
-        <ellipse id="Ellipse_7-12" data-name="Ellipse 7" cx="44.5" cy="45" rx="44.5" ry="45" transform="translate(29 66)" fill="#fff"/>
+        <ellipse id="Ellipse_7-13" data-name="Ellipse 7" cx="44.5" cy="45" rx="44.5" ry="45" transform="translate(29 66)" fill="#fff"/>
       </g>
       <text id="Git" transform="translate(346 4154)" font-size="25" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="25">Git</tspan></text>
     </g>
     <g id="C_2" data-name="C++" transform="translate(918 38)">
       <g transform="matrix(1, 0, 0, 1, -503, 4119)" filter="url(#Ellipse_7-2)">
-        <ellipse id="Ellipse_7-13" data-name="Ellipse 7" cx="44.5" cy="45" rx="44.5" ry="45" transform="translate(823 6)" fill="#fff"/>
+        <ellipse id="Ellipse_7-14" data-name="Ellipse 7" cx="44.5" cy="45" rx="44.5" ry="45" transform="translate(823 6)" fill="#fff"/>
       </g>
-      <text id="Angular" transform="translate(326 4156)" font-size="20" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="20">Angular</tspan></text>
-      <text id="Angular-2" data-name="Angular" transform="translate(327 4156)" font-size="20" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="20">Angular</tspan></text>
+      <text id="Angular" transform="translate(327 4157)" font-size="20" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="20">Angular</tspan></text>
     </g>
     <g id="C_3" data-name="C++" transform="translate(547 152)">
       <g transform="matrix(1, 0, 0, 1, -132, 4005)" filter="url(#Ellipse_7-3)">
-        <ellipse id="Ellipse_7-14" data-name="Ellipse 7" cx="44.5" cy="45" rx="44.5" ry="45" transform="translate(452 120)" fill="#fff"/>
+        <ellipse id="Ellipse_7-15" data-name="Ellipse 7" cx="44.5" cy="45" rx="44.5" ry="45" transform="translate(452 120)" fill="#fff"/>
       </g>
       <text id="HTML" transform="translate(328 4154)" font-size="25" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="25">HTML</tspan></text>
     </g>
     <g id="C_4" data-name="C++" transform="translate(304 116.401)">
       <g transform="matrix(1, 0, 0, 1, 111, 4040.6)" filter="url(#Ellipse_7-4)">
-        <circle id="Ellipse_7-15" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(209 84)" fill="#d38a51"/>
+        <circle id="Ellipse_7-16" data-name="Ellipse 7" cx="61" cy="61" r="61" transform="translate(209 84)" fill="#ea6227"/>
       </g>
-      <text id="Node.js" transform="translate(332 4178.599)" font-size="36" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="36">Node.js</tspan></text>
+      <text id="Node.js" transform="translate(332 4163.599)" font-size="29" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="29">Node.js</tspan></text>
     </g>
     <g id="C_5" data-name="C++" transform="translate(304 413.401)">
       <g transform="matrix(1, 0, 0, 1, 111, 3743.6)" filter="url(#Ellipse_7-5)">
-        <circle id="Ellipse_7-16" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(209 381)" fill="#fff"/>
+        <circle id="Ellipse_7-17" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(209 381)" fill="#fff"/>
       </g>
-      <text id="And_many_more_" data-name="And many more!" transform="translate(332 4166.599)" font-size="25" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="6.275" y="25">And many </tspan><tspan x="32.637" y="59">more!</tspan></text>
+      <text id="Python" transform="translate(332 4183.599)" font-size="25" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="23.812" y="25">Python</tspan></text>
     </g>
     <g id="C_6" data-name="C++" transform="translate(727 170.401)">
       <g transform="matrix(1, 0, 0, 1, -312, 3986.6)" filter="url(#Ellipse_7-6)">
-        <circle id="Ellipse_7-17" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(632 138)" fill="#d38a51"/>
+        <circle id="Ellipse_7-18" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(632 138)" fill="#ea6227"/>
       </g>
       <text id="React" transform="translate(348 4178.599)" font-size="36" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="36">React</tspan></text>
     </g>
     <g id="C_7" data-name="C++" transform="translate(501 302.401)">
       <g transform="matrix(1, 0, 0, 1, -86, 3854.6)" filter="url(#Ellipse_7-7)">
-        <circle id="Ellipse_7-18" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(406 270)" fill="#fff"/>
+        <circle id="Ellipse_7-19" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(406 270)" fill="#fff"/>
       </g>
       <text id="Java_" data-name="Java
 " transform="translate(357 4178.599)" font-size="36" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="36">Java</tspan></text>
     </g>
     <g id="C_8" data-name="C++" transform="translate(918 341.401)">
       <g transform="matrix(1, 0, 0, 1, -503, 3815.6)" filter="url(#Ellipse_7-8)">
-        <circle id="Ellipse_7-19" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(823 309)" fill="#fff"/>
+        <circle id="Ellipse_7-20" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(823 309)" fill="#fff"/>
       </g>
       <text id="JavaScript" transform="translate(329 4178.599)" font-size="29" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="29">JavaScript</tspan></text>
     </g>
     <g id="C_9" data-name="C++" transform="translate(104 278.401)">
       <g transform="matrix(1, 0, 0, 1, 311, 3878.6)" filter="url(#Ellipse_7-9)">
-        <circle id="Ellipse_7-20" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(9 246)" fill="#d38a51"/>
+        <circle id="Ellipse_7-21" data-name="Ellipse 7" cx="76" cy="76" r="76" transform="translate(9 246)" fill="#ea6227"/>
       </g>
       <text id="CSS" transform="translate(366 4178.599)" font-size="29" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="29">CSS</tspan></text>
     </g>
     <g id="C_10" data-name="C++" transform="translate(647 98.401)">
       <g transform="matrix(1, 0, 0, 1, -232, 4058.6)" filter="url(#Ellipse_7-10)">
-        <circle id="Ellipse_7-21" data-name="Ellipse 7" cx="45" cy="45" r="45" transform="translate(552 31)" fill="#d38a51"/>
+        <circle id="Ellipse_7-22" data-name="Ellipse 7" cx="45" cy="45" r="45" transform="translate(552 31)" fill="#ea6227"/>
       </g>
       <text id="React_Native" data-name="React Native" transform="translate(342 4113.599)" font-size="15" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="4.06" y="15">React </tspan><tspan x="1.638" y="35">Native</tspan></text>
     </g>
-    <g id="C_11" data-name="C++" transform="translate(1070 152.401)">
-      <g transform="matrix(1, 0, 0, 1, -655, 4004.6)" filter="url(#Ellipse_7-11)">
-        <ellipse id="Ellipse_7-22" data-name="Ellipse 7" cx="29" cy="27.5" rx="29" ry="27.5" transform="translate(975 120)" fill="#d38a51"/>
+    <g id="C_11" data-name="C++" transform="translate(713 457.401)">
+      <g transform="matrix(1, 0, 0, 1, -298, 3699.6)" filter="url(#Ellipse_7-11)">
+        <circle id="Ellipse_7-23" data-name="Ellipse 7" cx="40" cy="40" r="40" transform="translate(618 390)" fill="#ea6227"/>
       </g>
-      <text id="C_12" data-name="C++" transform="translate(335 4143.599)" font-size="15" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="15">C++</tspan></text>
+      <text id="Vue.js" transform="translate(337 4119.599)" font-size="15" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="3.168" y="15">Vue.js</tspan></text>
+    </g>
+    <g id="C_12" data-name="C++" transform="translate(1070 152.401)">
+      <g transform="matrix(1, 0, 0, 1, -655, 4004.6)" filter="url(#Ellipse_7-12)">
+        <ellipse id="Ellipse_7-24" data-name="Ellipse 7" cx="29" cy="27.5" rx="29" ry="27.5" transform="translate(975 120)" fill="#ea6227"/>
+      </g>
+      <text id="C_13" data-name="C++" transform="translate(335 4143.599)" font-size="15" font-family="Nunito-SemiBold, Nunito" font-weight="600"><tspan x="0" y="15">C++</tspan></text>
     </g>
   </g>
 </svg>

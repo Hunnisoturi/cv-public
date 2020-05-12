@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid, Paper, Container } from '@material-ui/core';
+import { Typography, Grid, Paper, Container, Link } from '@material-ui/core';
 import { Spacers } from '../utils/styles';
 import { projects } from '../utils/data';
 import ArrowDown from './ArrowDown';
@@ -11,7 +11,7 @@ const styles = makeStyles(theme => ({
     borderRadius: '25px',
     width: '82%',
     minWidth: '360px',
-    maxHeight: '485px',
+    height: '500px',
     overflow: 'hidden',
   },
   container: {
@@ -40,11 +40,11 @@ const styles = makeStyles(theme => ({
     justifyContent: 'center',
   },
   header: {
-    marginTop: '40px',
+    marginTop: '10px',
   },
   subtitle: {
-    marginTop: '40px',
-    marginBottom: '40px',
+    marginTop: '30px',
+    marginBottom: '30px',
   },
   textContainer: {
     padding: '30px',
@@ -53,6 +53,9 @@ const styles = makeStyles(theme => ({
     marginTop: Spacers.spacerDesktop,
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
+    },
+    link: {
+      textDecoration: 'none',
     },
   },
 }));
@@ -77,7 +80,9 @@ const Projects = () => {
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="h4" className={classes.header}>
-                      <Trans i18nKey={p.name} />
+                      <Link href={p.link} className={classes.link} target="_blank" color="textPrimary">
+                        <Trans i18nKey={p.name} />
+                      </Link>
                     </Typography>
                     <Typography variant="h5" color="secondary" className={classes.subtitle}>
                       <Trans i18nKey={p.subtitle} />

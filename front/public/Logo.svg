@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="129" height="149" viewBox="0 0 129 149"><g transform="translate(-491 -261)"><text transform="translate(491 266)" fill="#d38a51" font-size="106" font-family="Nunito-Regular, Nunito"><tspan x="0" y="107">A</tspan></text><text transform="translate(620 405) rotate(180)" fill="#d38a51" font-size="106" font-family="Nunito-Regular, Nunito"><tspan x="0" y="107">A</tspan></text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="149" viewBox="0 0 129 149">
+  <g id="Logo" transform="translate(-491 -261)">
+    <text id="A" transform="translate(491 266)" fill="#ea6227" font-size="106" font-family="Nunito-Regular, Nunito"><tspan x="0" y="107">A</tspan></text>
+    <text id="A-2" data-name="A" transform="translate(620 405) rotate(180)" fill="#ea6227" font-size="106" font-family="Nunito-Regular, Nunito"><tspan x="0" y="107">A</tspan></text>
+  </g>
+</svg>

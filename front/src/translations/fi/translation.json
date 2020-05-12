@@ -1,5 +1,7 @@
 {
   "appbar": "Appipalkki",
+  "acsCardHeader": "api-acs.tech",
+  "acsCardSubtitle": "Sivu rakennettu osana projektiryhmää korvaamaan Tampereen korkeakouluyhteisön avoimen datan palvelut.",
   "amk": "Tampereen Ammattikorkeakoulu, Tieto- ja viestintätekniikka, Ohjelmistotekniikka",
   "amkPlaceAndTime": "Tampere, Suomi 2016-",
   "callToAction": "Vieritä alas nähdäksesi lisää!",
@@ -8,7 +10,7 @@
   "copyright": "Copyright @ Aapo Attila 2020",
   "comma": ",",
   "cvCardHeader": "Tämä sivu!",
-  "cvCardSubtitle": "Tämä sivu on rakennettu Reactilla ja Material UI:lla.",
+  "cvCardSubtitle": "Tämä sivu on rakennettu Reactilla, Material UI:lla ja Node.js:llä.",
   "education": "Koulutus",
   "emailSent": "Olen yhteydessä pian!",
   "design": "suunniteltu",

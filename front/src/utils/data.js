@@ -1,4 +1,5 @@
-import cvPhoto from '../assets/cvProject2x.jpg';
+import cv from '../assets/cvProject@2x.jpg';
+import acs from '../assets/acs@2x.jpg';
 
 export const educations = [
   {
@@ -28,17 +29,18 @@ export const about = [
 
 export const projects = [
   {
-    image: cvPhoto,
+    image: cv,
     name: 'cvCardHeader',
     subtitle: 'cvCardSubtitle',
   },
   {
-    image: cvPhoto,
-    name: 'cvCardHeader',
-    subtitle: 'cvCardSubtitle',
+    image: acs,
+    link: 'http://api-acs.tech',
+    name: 'acsCardHeader',
+    subtitle: 'acsCardSubtitle',
   },
   {
-    image: cvPhoto,
+    image: cv,
     name: 'cvCardHeader',
     subtitle: 'cvCardSubtitle',
   },

@@ -1,5 +1,7 @@
 {
   "appbar": "Appbar",
+  "acsCardHeader": "api-acs.tech",
+  "acsCardSubtitle": "The site was built to replace the open data services of Tampere higher education community.",
   "amk": "Tampere University of Applied Sciences, Software Development",
   "amkPlaceAndTime": "Tampere, Finland 2016-",
   "callToAction": "Scroll down to learn more!",
@@ -8,7 +10,7 @@
   "copyright" : "Copyright @ Aapo Attila 2020",
   "comma": ",",
   "cvCardHeader": "This website!",
-  "cvCardSubtitle": "This site was built using react and Material UI.",
+  "cvCardSubtitle": "This site was built using React, Material UI and Node.js.",
   "education": "Education",
   "emailSent": "I'll be in touch shortly!",
   "design": "design",
