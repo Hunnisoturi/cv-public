@@ -42,7 +42,7 @@ const styles = makeStyles(theme => ({
     minWidth: '400px',
   },
   text: {
-    width: '80%',
+    width: '85%',
   },
 }));
 

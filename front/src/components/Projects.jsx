@@ -35,10 +35,6 @@ const styles = makeStyles(theme => ({
     width: '100%',
     borderRadius: '25px 25px 0px 0px',
   },
-  imageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
   header: {
     marginTop: '10px',
   },
@@ -75,12 +71,12 @@ const Projects = () => {
             <Paper elevation={5} className={classes.paper}>
               <Grid container direction="column">
                 <Grid item xs>
-                  <div className={classes.imageContainer}>
+                  <div>
                     <img alt="Project" src={p.image} className={classes.image} />
                   </div>
                   <div className={classes.textContainer}>
                     <Typography variant="h4" className={classes.header}>
-                      <Link href={p.link ? p.link : '#projects'} target="_blank" underline="none" color="textPrimary">
+                      <Link href={p.link ? p.link : null} target="_blank" underline="none" color="textPrimary">
                         <Trans i18nKey={p.name} />
                       </Link>
                     </Typography>

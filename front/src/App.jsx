@@ -44,10 +44,18 @@ const styles = makeStyles(theme => ({
       paddingTop: Spacers.headerMobile,
     },
   },
-  headlineGridItem: {
+  headline: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  graphic: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: 'center',
+    },
   },
   arrow: {
     height: '100px',
@@ -84,7 +92,7 @@ const App = () => {
             <Grid
               item
               xs={6}
-              className={classes.headlineGridItem}
+              className={classes.headline}
             >
               <Fade in timeout={1000}>
                 <div>
@@ -95,7 +103,7 @@ const App = () => {
             <Grid
               item
               xs={6}
-              className={classes.headlineGridItem}
+              className={classes.graphic}
             >
               <Fade in timeout={1700}>
                 <Dots className={classes.dots} />

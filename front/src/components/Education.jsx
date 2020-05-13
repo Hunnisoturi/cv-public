@@ -23,6 +23,7 @@ const styles = makeStyles(theme => ({
   dot: {
     display: 'flex',
     justifyContent: 'center',
+    maxWidth: '450px',
     [theme.breakpoints.down('xs')]: {
       width: '80%',
     },
@@ -40,7 +41,7 @@ const Education = () => {
   return (
     <Container maxWidth="xl">
       <Grid container direction="row" justify="center" className={classes.container} spacing={5}>
-        <Grid item className={classes.dot} xs>
+        <Grid item className={classes.dot} xs={6}>
           <div>
             <EduDot />
             <div className={classes.dotText}>
@@ -50,7 +51,7 @@ const Education = () => {
             </div>
           </div>
         </Grid>
-        <Grid container direction="column" item xs alignItems="center">
+        <Grid container direction="column" item md={6} xs={12} alignItems="center">
           {educations.map(s => (
             <Grid container direction="column" item xs justify="center" key={s.name} spacing={5} className={classes.item}>
               <Grid item>

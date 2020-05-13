@@ -72,12 +72,6 @@ const styles = makeStyles({
   },
 });
 
-const icons = [
-  1,
-  2,
-  3,
-];
-
 const Contact = () => {
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');

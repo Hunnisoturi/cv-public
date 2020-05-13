@@ -9,21 +9,21 @@ export const educations = [
   },
   {
     name: 'highSchool',
-    subtitle: 'amkPlaceAndTime',
+    subtitle: 'highSchoolPlaceAndTime',
   },
 ];
 
 export const about = [
   {
-    name: 'introduction',
+    name: 'introLeft',
+    subtitle: 'aboutMe',
+  },
+  {
+    name: 'introMid',
     subtitle: 'introText',
   },
   {
-    name: 'introduction',
-    subtitle: 'introText',
-  },
-  {
-    name: 'introduction',
+    name: 'introRight',
     subtitle: 'introText',
   },
 ];
