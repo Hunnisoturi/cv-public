@@ -11,12 +11,9 @@ import
   DialogTitle,
   DialogContent,
   DialogActions,
-  Snackbar,
   IconButton,
   Link,
 } from '@material-ui/core';
-import { Close } from '@material-ui/icons';
-import { Alert } from '@material-ui/lab';
 import API from '../services/api';
 import { ErrorMessage, SuccessMessage } from './Message';
 
@@ -116,7 +113,7 @@ const Contact = () => {
       return;
     }
     setMailError(false);
-  }
+  };
 
   const validate = () => {
     if (name.length !== 0 && company.length !== 0 && email.length !== 0) {
