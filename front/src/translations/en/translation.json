@@ -28,6 +28,7 @@
   "home": "Home",
   "aboutMe": "I'm a 23 year old Software Development student from Tampere. My studies will be finished in fall 2020, and I'm looking for a suitable position to start my career as a developer. My main interests are in the fields of Front-end and Full stack development, but I am always willing to venture out of my technological comfort zone.",
   "language": "Suomeksi",
+  "mailError": "Something went wrong!",
   "no": "Cancel",
   "portfolio": "Portfolio",
   "projects": "Projects",

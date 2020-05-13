@@ -18,6 +18,7 @@ import
 import { Close } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import API from '../services/api';
+import { ErrorMessage, SuccessMessage } from './Message';
 
 import linkedin from '../assets/LinkedIn.png';
 
@@ -81,6 +82,7 @@ const Contact = () => {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
   const [openError, setOpenError] = useState(false);
+  const [mailError, setMailError] = useState(false);
 
   const { t } = useTranslation();
 
@@ -108,6 +110,14 @@ const Contact = () => {
     setOpenError(false);
   };
 
+  const handleShowMailError = () => setMailError(true);
+  const handleCloseMailError = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setMailError(false);
+  }
+
   const validate = () => {
     if (name.length !== 0 && company.length !== 0 && email.length !== 0) {
       handleOpen();
@@ -121,8 +131,8 @@ const Contact = () => {
       .then(() => {
         handleShow();
       })
-      .catch(error => {
-        console.error(error);
+      .catch(() => {
+        handleShowMailError();
       })
       .finally(() => {
         handleHide();
@@ -229,55 +239,21 @@ const Contact = () => {
           </IconButton>
         </span>
       </Container>
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
+      <SuccessMessage
         open={show}
-        autoHideDuration={6000}
         onClose={handleClose}
-        message={t('emailSent')}
-        action={(
-          <>
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="primary"
-              onClick={handleClose}
-            >
-              <Close fontSize="small" />
-            </IconButton>
-          </>
-        )}
+        msg="emailSent"
       />
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
+      <ErrorMessage
         open={openError}
         onClose={handleCloseError}
-      >
-        <Alert
-          severity="error"
-          variant="filled"
-          action={(
-            <>
-              <IconButton
-                size="small"
-                aria-label="close"
-                color="black"
-                onClick={handleCloseError}
-              >
-                <Close fontSize="small" />
-              </IconButton>
-            </>
-          )}
-        >
-          <Trans i18nKey="formError" />
-        </Alert>
-      </Snackbar>
+        msg="formError"
+      />
+      <ErrorMessage
+        open={mailError}
+        onClose={handleCloseMailError}
+        msg="mailError"
+      />
       <Dialog
         open={open}
         onClose={handleHide}
