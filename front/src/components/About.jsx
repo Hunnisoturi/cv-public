@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 import { Avatar, Grid, Typography, Container } from '@material-ui/core';
-import { Mood } from '@material-ui/icons';
+import { School, Code, SportsKabaddi } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { Spacers } from '../utils/styles';
 import { about } from '../utils/data';
@@ -49,6 +49,18 @@ const styles = makeStyles(theme => ({
 const About = () => {
   const classes = styles();
 
+  const icons = [
+    {
+      icon: <School color="primary" className={classes.icon} />,
+    },
+    {
+      icon: <Code color="primary" className={classes.icon} />,
+    },
+    {
+      icon: <SportsKabaddi color="primary" className={classes.icon} />,
+    },
+  ];
+
   return (
     <Container maxWidth="xl" className={classes.container}>
       <Typography variant="h3">
@@ -60,11 +72,12 @@ const About = () => {
         <Trans i18nKey="age" />
       </Typography>
       <Grid container className={classes.gridContainer} spacing={3} justify="center">
-        {about.map(i => (
+        {about.map((i, index) => (
           <Grid item xs={4} key={i.name} className={classes.element}>
             <Grid container direction="column" item alignItems="center">
               <Grid item xs={6}>
-                <Mood color="primary" className={classes.icon} />
+                {/* <Mood color="primary" className={classes.icon} /> */}
+                {icons[index].icon}
               </Grid>
               <Grid item xs={12} className={classes.text}>
                 <Typography variant="h5">

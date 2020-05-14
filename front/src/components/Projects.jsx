@@ -10,8 +10,8 @@ const styles = makeStyles(theme => ({
   paper: {
     borderRadius: '25px',
     width: '82%',
-    minWidth: '360px',
     height: '500px',
+    minWidth: '360px',
     overflow: 'hidden',
   },
   container: {

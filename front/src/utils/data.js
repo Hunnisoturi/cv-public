@@ -20,11 +20,11 @@ export const about = [
   },
   {
     name: 'introMid',
-    subtitle: 'introText',
+    subtitle: 'aboutCareer',
   },
   {
     name: 'introRight',
-    subtitle: 'introText',
+    subtitle: 'aboutLife',
   },
 ];
 
