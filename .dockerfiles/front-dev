@@ -1,0 +1,9 @@
+#! dockerfile
+FROM node:latest
+
+COPY ./front /opt/app
+RUN cd /opt/app && npm install
+
+WORKDIR /opt/app
+
+CMD ["npm", "start"]

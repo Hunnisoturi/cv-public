@@ -1,0 +1,9 @@
+#! dockerfile
+FROM mhart/alpine-node:latest
+
+COPY ./back /opt/app
+RUN cd /opt/app && npm install
+
+WORKDIR /opt/app
+
+CMD ["npm", "start"]
