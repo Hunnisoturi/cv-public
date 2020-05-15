@@ -9,10 +9,8 @@ services:
     ports:
       - "3002:3002"
     environment:
-      NODE_ENV: development
+      - NODE_ENV=development
     restart: always
-    stdin_open: true
-    tty: true
 
   front:
     build:
@@ -24,7 +22,7 @@ services:
       - ./front:/opt/app
       - /opt/app/node_modules
     environment:
-      NODE_ENV: development
+      - NODE_ENV=development
     restart: always
     stdin_open: true
     tty: true
