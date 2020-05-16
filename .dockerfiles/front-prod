@@ -1,4 +1,4 @@
-# Stage 1
+#! dockerfile
 FROM node:latest as react-build
 
 COPY ./front /opt/app
