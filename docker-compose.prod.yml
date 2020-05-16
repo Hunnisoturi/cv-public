@@ -15,7 +15,7 @@ services:
   front:
     build:
       context: ./
-      dockerfile: ./dockerfiles/front-prod
+      dockerfile: .dockerfiles/front-prod
     ports:
       - "3000:3000"
     volumes:
