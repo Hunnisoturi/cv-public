@@ -3,7 +3,7 @@ FROM node:latest as react-build
 
 COPY ./front /opt/app
 RUN cd /opt/app && npm install
-RUN npm run build
+RUN cd /opt/app && npm run build
 
 WORKDIR /opt/app
 
