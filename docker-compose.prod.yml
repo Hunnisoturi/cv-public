@@ -37,7 +37,7 @@ services:
       - ./logs/nginx:/var/log/nginx
       # Volumes for data from certbot, SSL certificates, configuration etc.
       - ./server/data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - ./server/data/certbot/www:/var/www/certbot
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     depends_on:
       - front
