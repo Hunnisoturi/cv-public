@@ -23,6 +23,7 @@ services:
       - /opt/app/node_modules
     environment: 
       - NODE_ENV=production
+      - REACT_APP_BACKEND_URL=https://api.aapoattila.dev:3002
     restart: always
     stdin_open: true
     tty: true
