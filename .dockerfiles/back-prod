@@ -6,10 +6,8 @@ RUN cd /opt/app && npm install
 
 FROM node:13-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /opt/app
 COPY --from=builder /opt/app/node_modules node_modules
-
 COPY . .
-
 CMD [ "npm", "start" ]
 
