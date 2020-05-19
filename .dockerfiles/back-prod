@@ -4,10 +4,6 @@ FROM mhart/alpine-node:latest as builder
 COPY ./back /opt/app
 RUN cd /opt/app && npm install
 
-FROM node:13-alpine
-
-WORKDIR /usr/src/app
-COPY --from=builder /opt/app/node_modules node_modules
-COPY . .
+WORKDIR /opt/app
 CMD [ "npm", "start" ]
 
