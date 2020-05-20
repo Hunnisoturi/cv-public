@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, makeStyles, Grid, Divider, Fade } from '@material-ui/core';
-import { withTranslation } from 'react-i18next';
+import { Container, makeStyles, Grid, Divider, Fade, Button, Typography, Box } from '@material-ui/core';
+import { Trans, withTranslation } from 'react-i18next';
+import CookieConsent from 'react-cookie-consent';
 import { Spacers } from './utils/styles';
 import Header from './components/Header';
 import Headline from './components/Headline';
@@ -126,6 +127,31 @@ const App = () => {
       </main>
       <Contact />
       <Footer />
+      <CookieConsent
+        location="bottom"
+        style={{
+          background: '#D3D3D3',
+          display: 'flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          minHeight: '4rem',
+          paddingLeft: '32px',
+          paddingRight: '32px',
+        }}
+        ButtonComponent={({ onClick }) => (
+          <Button variant="contained" color="primary" onClick={onClick}>
+            <Typography color="textPrimary">
+              <Box fontWeight={700}>
+                <Trans i18nKey="cookieConsent" />
+              </Box>
+            </Typography>
+          </Button>
+        )}
+      >
+        <Typography variant="h5" color="textPrimary">
+          <Trans i18nKey="cookieBar" />
+        </Typography>
+      </CookieConsent>
     </Container>
   );
 };
