@@ -10,7 +10,7 @@ import portrait from '../assets/portrait.jpg';
 
 const styles = makeStyles(theme => ({
   avatar: {
-    marginTop: '100px',
+    marginTop: '50px',
     height: '200px',
     width: '200px',
     [theme.breakpoints.down('xs')]: {
@@ -22,10 +22,10 @@ const styles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: '100px',
+    paddingTop: '200px',
   },
   gridContainer: {
-    marginTop: '100px',
+    marginTop: '50px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },

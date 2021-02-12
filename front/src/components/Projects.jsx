@@ -20,7 +20,7 @@ const styles = makeStyles(theme => ({
     alignItems: 'center',
   },
   gridContainer: {
-    marginTop: '100px',
+    marginTop: '50px',
     width: '100%',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,

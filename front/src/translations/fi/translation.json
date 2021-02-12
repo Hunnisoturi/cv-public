@@ -13,7 +13,7 @@
   "cookieBar": "Sivusto käyttää evästeitä käyttäjäkokemuksen parantamiseen.",
   "close": "Sulje",
   "cvCardHeader": "Tämä sivu!",
-  "cvCardSubtitle": "Tämä sivu on rakennettu Reactilla, Material UI:lla ja Node.js:llä.",
+  "cvCardSubtitle": "Tämä sivu on rakennettu Reactilla, Material UI:lla, Dockerilla ja Node.js:llä.",
   "education": "Koulutus",
   "emailSent": "Olen yhteydessä pian!",
   "design": "suunniteltu",
