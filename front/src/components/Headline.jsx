@@ -19,18 +19,18 @@ const Headline = () => {
 
   return (
     <div>
-      <Typography variant="h1" color="textPrimary" className={classes.design}>
+      <Typography variant="h2" color="textPrimary" className={classes.design}>
         <Box fontWeight={400}>
           <Trans i18nKey="headlineStart" />
         </Box>
       </Typography>
-      <Typography variant="h1" color="primary" className={classes.design}>
+      <Typography variant="h2" color="primary" className={classes.design}>
         <Box fontWeight={400}>
           <Trans i18nKey="design" />
           <Trans i18nKey="comma" />
         </Box>
       </Typography>
-      <Typography variant="h1" color="textPrimary">
+      <Typography variant="h2" color="textPrimary">
         <Box fontWeight={400}>
           <Trans i18nKey="headlineEnd" />
         </Box>

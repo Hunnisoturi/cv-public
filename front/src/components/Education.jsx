@@ -55,10 +55,10 @@ const Education = () => {
           {educations.map(s => (
             <Grid container direction="column" item xs justify="center" key={s.name} spacing={5} className={classes.item}>
               <Grid item>
-                <Typography variant="h5">
+                <Typography variant="h6">
                   <Trans i18nKey={s.name} />
                 </Typography>
-                <Typography variant="h6" color="secondary">
+                <Typography variant="subtitle1" color="secondary">
                   <Trans i18nKey={s.subtitle} />
                 </Typography>
               </Grid>

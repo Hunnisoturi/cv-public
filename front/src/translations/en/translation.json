@@ -1,7 +1,7 @@
 {
   "appbar": "Appbar",
   "acsCardHeader": "api-acs.tech",
-  "acsCardSubtitle": "The site was built with a group of students to replace the open data services of Tampere higher education community.",
+  "acsCardSubtitle": "The project was built with a group of students for the Tampere higher education community.",
   "amk": "Tampere University of Applied Sciences, ICT Engineering, Software Development",
   "amkPlaceAndTime": "Tampere, Finland 2016-",
   "callToAction": "Get to know me!",
@@ -13,7 +13,7 @@
   "cookieBar": "This website uses cookies to enhance the user experience.",
   "close": "Close",
   "cvCardHeader": "This website!",
-  "cvCardSubtitle": "This site was built using React, Material UI and Node.js.",
+  "cvCardSubtitle": "This project was built using React, Material-UI, Docker and Node.js. Hope you like it!",
   "education": "Education",
   "emailSent": "I'll be in touch shortly!",
   "design": "design",

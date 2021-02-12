@@ -11,8 +11,8 @@ import portrait from '../assets/portrait.jpg';
 const styles = makeStyles(theme => ({
   avatar: {
     marginTop: '100px',
-    height: '150px',
-    width: '150px',
+    height: '200px',
+    width: '200px',
     [theme.breakpoints.down('xs')]: {
       height: '180px',
       width: '180px',
@@ -25,21 +25,21 @@ const styles = makeStyles(theme => ({
     paddingTop: '100px',
   },
   gridContainer: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
   },
   icon: {
-    height: '100px',
-    width: '100px',
+    height: '80px',
+    width: '80px',
     paddingBottom: '30px',
   },
   nameText: {
     marginTop: '30px',
   },
   element: {
-    minWidth: '400px',
+    minWidth: '300px',
   },
   text: {
     width: '85%',
@@ -63,7 +63,7 @@ const About = () => {
 
   return (
     <Container maxWidth="xl" className={classes.container}>
-      <Typography variant="h4">
+      <Typography variant="h3">
         <Trans i18nKey="whoami" />
       </Typography>
       <Avatar alt="Aapo Attila" src={portrait} className={classes.avatar} />
