@@ -11,8 +11,8 @@ import portrait from '../assets/portrait.jpg';
 const styles = makeStyles(theme => ({
   avatar: {
     marginTop: '100px',
-    height: '300px',
-    width: '300px',
+    height: '150px',
+    width: '150px',
     [theme.breakpoints.down('xs')]: {
       height: '180px',
       width: '180px',
@@ -31,9 +31,9 @@ const styles = makeStyles(theme => ({
     },
   },
   icon: {
-    height: '150px',
-    width: '150px',
-    paddingBottom: '50px',
+    height: '100px',
+    width: '100px',
+    paddingBottom: '30px',
   },
   nameText: {
     marginTop: '30px',
@@ -63,11 +63,11 @@ const About = () => {
 
   return (
     <Container maxWidth="xl" className={classes.container}>
-      <Typography variant="h3">
+      <Typography variant="h4">
         <Trans i18nKey="whoami" />
       </Typography>
       <Avatar alt="Aapo Attila" src={portrait} className={classes.avatar} />
-      <Typography variant="h5" color="secondary" className={classes.nameText}>
+      <Typography variant="body1" color="secondary" className={classes.nameText}>
         <Trans i18nKey="name" />
         <Trans i18nKey="age" />
       </Typography>
@@ -80,7 +80,7 @@ const About = () => {
                 {icons[index].icon}
               </Grid>
               <Grid item xs={12} className={classes.text}>
-                <Typography variant="h5">
+                <Typography variant="body1">
                   <Trans i18nKey={i.subtitle} />
                 </Typography>
               </Grid>

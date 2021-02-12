@@ -85,7 +85,7 @@ const styles = makeStyles(theme => ({
 const App = () => {
   const classes = styles();
   return (
-    <Container id="home" maxWidth="xl" className={classes.root}>
+    <Container id="home" maxWidth="lg" className={classes.root}>
       <Header />
       <main>
         <Container maxWidth="xl" className={classes.mainGrid}>
