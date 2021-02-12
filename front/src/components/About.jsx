@@ -63,7 +63,7 @@ const About = () => {
 
   return (
     <Container maxWidth="xl" className={classes.container}>
-      <Typography variant="h3">
+      <Typography variant="h4">
         <Trans i18nKey="whoami" />
       </Typography>
       <Avatar alt="Aapo Attila" src={portrait} className={classes.avatar} />

@@ -63,7 +63,7 @@ const Projects = () => {
   return (
     <Container maxWidth="xl" className={classes.container}>
       <ArrowDown />
-      <Typography variant="h3" className={classes.headline} id="projects">
+      <Typography variant="h4" className={classes.headline} id="projects">
         <Trans i18nKey="projects" />
       </Typography>
       <Grid container className={classes.gridContainer} spacing={10}>

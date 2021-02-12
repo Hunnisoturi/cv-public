@@ -34,10 +34,10 @@ const Technologies = () => {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h3">
+      <Typography variant="h4">
         <Trans i18nKey="technologies" />
       </Typography>
-      <Typography variant="h5" color="secondary" className={classes.subtitle}>
+      <Typography variant="h6" color="secondary" className={classes.subtitle}>
         <Trans i18nKey="technologySubtitle" />
       </Typography>
       <div className={classes.bubbles}>
