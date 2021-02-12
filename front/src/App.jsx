@@ -23,7 +23,7 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       paddingBottom: '50px',
     },
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
       margin: '0px',
     },
   },
