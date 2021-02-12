@@ -9,7 +9,7 @@ import { ReactComponent as EduDot } from '../assets/dotWhite.svg';
 
 const styles = makeStyles(theme => ({
   container: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       alignItems: 'center',

@@ -31,7 +31,7 @@ const styles = makeStyles(theme => ({
     marginBottom: '4rem',
   },
   divider: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
@@ -111,11 +111,11 @@ const App = () => {
               </Fade>
             </Grid>
           </Grid>
-          <Fade in timeout={1700}>
+          {/* <Fade in timeout={1700}>
             <div>
               <CallToAction />
             </div>
-          </Fade>
+          </Fade> */}
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />

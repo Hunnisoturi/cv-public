@@ -12,13 +12,13 @@ const styles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
   },
   bubbles: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     width: '70%',
     [theme.breakpoints.down('sm')]: {
       width: '100%',

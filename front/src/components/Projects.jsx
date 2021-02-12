@@ -20,7 +20,7 @@ const styles = makeStyles(theme => ({
     alignItems: 'center',
   },
   gridContainer: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     width: '100%',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
@@ -47,7 +47,7 @@ const styles = makeStyles(theme => ({
     padding: '30px',
   },
   headline: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
@@ -81,7 +81,7 @@ const Projects = () => {
                         <Trans i18nKey={p.name} />
                       </Link>
                     </Typography>
-                    <Typography variant="h6" color="secondary" className={classes.subtitle}>
+                    <Typography variant="subtitle1" color="secondary" className={classes.subtitle}>
                       <Trans i18nKey={p.subtitle} />
                     </Typography>
                   </div>

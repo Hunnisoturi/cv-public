@@ -7,7 +7,7 @@ const styles = makeStyles(theme => ({
   arrowSpan: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
