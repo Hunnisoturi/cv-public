@@ -3,7 +3,6 @@ import { Trans } from 'react-i18next';
 import { Avatar, Grid, Typography, Container } from '@material-ui/core';
 import { School, Code, SportsKabaddi } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
-import { Spacers } from '../utils/styles';
 import { about } from '../utils/data';
 
 import portrait from '../assets/portrait.jpg';
