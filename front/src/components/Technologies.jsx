@@ -26,6 +26,7 @@ const styles = makeStyles(theme => ({
   },
   subtitle: {
     marginTop: '50px',
+    textAlign: 'center',
   },
 }));
 

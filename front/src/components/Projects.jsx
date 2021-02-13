@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid, Paper, Container, Link, Box } from '@material-ui/core';
+import { Typography, Grid, Paper, Container, Link } from '@material-ui/core';
 import { Spacers } from '../utils/styles';
 import { projects } from '../utils/data';
 import ArrowDown from './ArrowDown';
@@ -28,7 +28,7 @@ const styles = makeStyles(theme => ({
   },
   gridItem: {
     height: '100%',
-    minWidth: '378px',
+    minWidth: '298px',
     display: 'flex',
     justifyContent: 'center',
   },
@@ -66,12 +66,12 @@ const Projects = () => {
       <Typography variant="h4" className={classes.headline} id="projects">
         <Trans i18nKey="projects" />
       </Typography>
-      <Grid container className={classes.gridContainer} spacing={10}>
+      <Grid container className={classes.gridContainer} spacing={10} justify="center">
         {projects.map(p => (
           <Grid item xs={4} className={classes.gridItem} key={p.name}>
             <Paper elevation={5} className={classes.paper}>
               <Grid container direction="column">
-                <Grid item xs>
+                <Grid item>
                   <div>
                     <img alt="Project" src={p.image} className={classes.image} />
                   </div>

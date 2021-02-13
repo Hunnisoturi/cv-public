@@ -23,11 +23,14 @@ const styles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     paddingTop: '200px',
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: '100px',
+    },
   },
   gridContainer: {
     marginTop: '50px',
     [theme.breakpoints.down('xs')]: {
-      marginTop: Spacers.spacerMobile,
+      marginTop: '50px',
     },
   },
   icon: {
@@ -39,10 +42,16 @@ const styles = makeStyles(theme => ({
     marginTop: '30px',
   },
   element: {
+    [theme.breakpoints.down('sm')]: {
+      paddingBottom: '40px',
+    },
     minWidth: '300px',
   },
   text: {
     width: '85%',
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
   },
 }));
 
@@ -71,15 +80,14 @@ const About = () => {
         <Trans i18nKey="name" />
         <Trans i18nKey="age" />
       </Typography>
-      <Grid container className={classes.gridContainer} spacing={3} justify="center">
+      <Grid container className={classes.gridContainer} justify="center">
         {about.map((i, index) => (
           <Grid item xs={4} key={i.name} className={classes.element}>
             <Grid container direction="column" item alignItems="center">
-              <Grid item xs={6}>
-                {/* <Mood color="primary" className={classes.icon} /> */}
+              <Grid item xs>
                 {icons[index].icon}
               </Grid>
-              <Grid item xs={12} className={classes.text}>
+              <Grid item xs className={classes.text}>
                 <Typography variant="body1">
                   <Trans i18nKey={i.subtitle} />
                 </Typography>
