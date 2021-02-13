@@ -50,7 +50,8 @@ const styles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '30px',
       justifyContent: 'center',
     }
   },
@@ -59,8 +60,13 @@ const styles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      width: '60%',
+    },
     [theme.breakpoints.down('xs')]: {
       justifyContent: 'center',
+      width: '100%',
     },
   },
   arrow: {
@@ -74,7 +80,7 @@ const styles = makeStyles(theme => ({
   },
   headlineGrid: {
     flexDirection: 'row',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column-reverse',
       alignItems: 'center',
     },
