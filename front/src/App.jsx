@@ -8,7 +8,7 @@ import Headline from './components/Headline';
 import About from './components/About';
 import Education from './components/Education';
 import Projects from './components/Projects';
-import CallToAction from './components/CallToAction';
+// import CallToAction from './components/CallToAction';
 import Technologies from './components/Technologies';
 import ArrowDown from './components/ArrowDown';
 import Contact from './components/Contact';
@@ -23,7 +23,7 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       paddingBottom: '50px',
     },
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
       margin: '0px',
     },
   },
@@ -31,7 +31,7 @@ const styles = makeStyles(theme => ({
     marginBottom: '4rem',
   },
   divider: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
@@ -46,16 +46,27 @@ const styles = makeStyles(theme => ({
     },
   },
   headline: {
+    width: '100%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '30px',
+      justifyContent: 'center',
+    }
   },
   graphic: {
+    width: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      width: '60%',
+    },
     [theme.breakpoints.down('xs')]: {
       justifyContent: 'center',
+      width: '100%',
     },
   },
   arrow: {
@@ -69,15 +80,16 @@ const styles = makeStyles(theme => ({
   },
   headlineGrid: {
     flexDirection: 'row',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column-reverse',
       alignItems: 'center',
     },
     dots: {
-      maxWidth: '562px',
-      [theme.breakpoints.down('xs')]: {
-        height: '180px',
-      },
+      width: '100%',
+      // maxWidth: '562px',
+      // [theme.breakpoints.down('xs')]: {
+      //   height: '180px',
+      // },
     },
   },
 }));
@@ -85,14 +97,13 @@ const styles = makeStyles(theme => ({
 const App = () => {
   const classes = styles();
   return (
-    <Container id="home" maxWidth="xl" className={classes.root}>
+    <Container id="home" maxWidth="lg" className={classes.root}>
       <Header />
       <main>
         <Container maxWidth="xl" className={classes.mainGrid}>
-          <Grid container className={classes.headlineGrid} spacing={5}>
+          <Grid container className={classes.headlineGrid} spacing={3}>
             <Grid
-              item
-              xs={6}
+              item xs
               className={classes.headline}
             >
               <Fade in timeout={1000}>
@@ -102,8 +113,7 @@ const App = () => {
               </Fade>
             </Grid>
             <Grid
-              item
-              xs={6}
+              item xs
               className={classes.graphic}
             >
               <Fade in timeout={1700}>
@@ -111,11 +121,11 @@ const App = () => {
               </Fade>
             </Grid>
           </Grid>
-          <Fade in timeout={1700}>
+          {/* <Fade in timeout={1700}>
             <div>
               <CallToAction />
             </div>
-          </Fade>
+          </Fade> */}
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
@@ -124,8 +134,8 @@ const App = () => {
           <Technologies />
           <ArrowDown />
         </Container>
+        <Contact />
       </main>
-      <Contact />
       <Footer />
       <CookieConsent
         location="bottom"

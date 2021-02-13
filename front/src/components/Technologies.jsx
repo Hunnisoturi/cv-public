@@ -12,13 +12,13 @@ const styles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
   },
   bubbles: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     width: '70%',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
@@ -26,6 +26,7 @@ const styles = makeStyles(theme => ({
   },
   subtitle: {
     marginTop: '50px',
+    textAlign: 'center',
   },
 }));
 
@@ -34,10 +35,10 @@ const Technologies = () => {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h3">
+      <Typography variant="h4">
         <Trans i18nKey="technologies" />
       </Typography>
-      <Typography variant="h5" color="secondary" className={classes.subtitle}>
+      <Typography variant="h6" color="secondary" className={classes.subtitle}>
         <Trans i18nKey="technologySubtitle" />
       </Typography>
       <div className={classes.bubbles}>

@@ -144,15 +144,15 @@ const Contact = () => {
 
   return (
     <Container id="contact" maxWidth="xl" className={classes.container}>
-      <Typography variant="h3" className={classes.contact}>
+      <Typography variant="h4" className={classes.contact}>
         <Trans i18nKey="contact" />
       </Typography>
-      <Typography variant="h5" color="secondary" className={classes.subtitle}>
+      <Typography variant="h6" color="secondary" className={classes.subtitle}>
         <Trans i18nKey="contactSubtitle" />
       </Typography>
       <Container maxWidth="sm" className={classes.form}>
         <span className={classes.item}>
-          <Typography variant="h5" className={classes.label}>
+          <Typography variant="h6" className={classes.label}>
             <Trans i18nKey="formName" />
           </Typography>
           <TextField
@@ -167,7 +167,7 @@ const Contact = () => {
           />
         </span>
         <span className={classes.item}>
-          <Typography variant="h5" className={classes.label}>
+          <Typography variant="h6" className={classes.label}>
             <Trans i18nKey="formEmail" />
           </Typography>
           <TextField
@@ -182,7 +182,7 @@ const Contact = () => {
           />
         </span>
         <span className={classes.item}>
-          <Typography variant="h5" className={classes.label}>
+          <Typography variant="h6" className={classes.label}>
             <Trans i18nKey="formCompany" />
           </Typography>
           <TextField
@@ -197,7 +197,7 @@ const Contact = () => {
           />
         </span>
         <span className={classes.item}>
-          <Typography variant="h5" className={classes.label}>
+          <Typography variant="h6" className={classes.label}>
             <Trans i18nKey="formMessage" />
           </Typography>
           <TextField

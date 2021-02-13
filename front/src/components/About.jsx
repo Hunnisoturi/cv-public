@@ -10,9 +10,9 @@ import portrait from '../assets/portrait.jpg';
 
 const styles = makeStyles(theme => ({
   avatar: {
-    marginTop: '100px',
-    height: '300px',
-    width: '300px',
+    marginTop: '50px',
+    height: '200px',
+    width: '200px',
     [theme.breakpoints.down('xs')]: {
       height: '180px',
       width: '180px',
@@ -22,27 +22,36 @@ const styles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: '100px',
+    paddingTop: '200px',
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: '100px',
+    },
   },
   gridContainer: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '50px',
     [theme.breakpoints.down('xs')]: {
-      marginTop: Spacers.spacerMobile,
+      marginTop: '50px',
     },
   },
   icon: {
-    height: '150px',
-    width: '150px',
-    paddingBottom: '50px',
+    height: '80px',
+    width: '80px',
+    paddingBottom: '30px',
   },
   nameText: {
     marginTop: '30px',
   },
   element: {
-    minWidth: '400px',
+    [theme.breakpoints.down('sm')]: {
+      paddingBottom: '40px',
+    },
+    minWidth: '300px',
   },
   text: {
     width: '85%',
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+    },
   },
 }));
 
@@ -63,24 +72,23 @@ const About = () => {
 
   return (
     <Container maxWidth="xl" className={classes.container}>
-      <Typography variant="h3">
+      <Typography variant="h4">
         <Trans i18nKey="whoami" />
       </Typography>
       <Avatar alt="Aapo Attila" src={portrait} className={classes.avatar} />
-      <Typography variant="h5" color="secondary" className={classes.nameText}>
+      <Typography variant="body1" color="secondary" className={classes.nameText}>
         <Trans i18nKey="name" />
         <Trans i18nKey="age" />
       </Typography>
-      <Grid container className={classes.gridContainer} spacing={3} justify="center">
+      <Grid container className={classes.gridContainer} justify="center">
         {about.map((i, index) => (
           <Grid item xs={4} key={i.name} className={classes.element}>
             <Grid container direction="column" item alignItems="center">
-              <Grid item xs={6}>
-                {/* <Mood color="primary" className={classes.icon} /> */}
+              <Grid item xs>
                 {icons[index].icon}
               </Grid>
-              <Grid item xs={12} className={classes.text}>
-                <Typography variant="h5">
+              <Grid item xs className={classes.text}>
+                <Typography variant="body1">
                   <Trans i18nKey={i.subtitle} />
                 </Typography>
               </Grid>

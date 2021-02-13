@@ -36,7 +36,6 @@ export const projects = [
   },
   {
     image: acs,
-    link: 'http://api-acs.tech',
     name: 'acsCardHeader',
     subtitle: 'acsCardSubtitle',
   },

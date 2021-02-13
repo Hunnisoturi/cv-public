@@ -8,10 +8,10 @@ import ArrowDown from './ArrowDown';
 
 const styles = makeStyles(theme => ({
   paper: {
-    borderRadius: '25px',
-    width: '82%',
-    height: '500px',
-    minWidth: '360px',
+    borderRadius: '15px',
+    // width: '82%',
+    height: '100%',
+    minWidth: '298px',
     overflow: 'hidden',
   },
   container: {
@@ -20,20 +20,21 @@ const styles = makeStyles(theme => ({
     alignItems: 'center',
   },
   gridContainer: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '50px',
     width: '100%',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
   },
   gridItem: {
-    minWidth: '440px',
+    height: '100%',
+    minWidth: '298px',
     display: 'flex',
     justifyContent: 'center',
   },
   image: {
     width: '100%',
-    borderRadius: '25px 25px 0px 0px',
+    borderRadius: '15px 15px 0px 0px',
   },
   header: {
     marginTop: '10px',
@@ -46,7 +47,7 @@ const styles = makeStyles(theme => ({
     padding: '30px',
   },
   headline: {
-    marginTop: Spacers.spacerDesktop,
+    marginTop: '100px',
     [theme.breakpoints.down('xs')]: {
       marginTop: Spacers.spacerMobile,
     },
@@ -62,25 +63,25 @@ const Projects = () => {
   return (
     <Container maxWidth="xl" className={classes.container}>
       <ArrowDown />
-      <Typography variant="h3" className={classes.headline} id="projects">
+      <Typography variant="h4" className={classes.headline} id="projects">
         <Trans i18nKey="projects" />
       </Typography>
-      <Grid container className={classes.gridContainer} justify="center" alignItems="center" spacing={10}>
+      <Grid container className={classes.gridContainer} spacing={10} justify="center">
         {projects.map(p => (
           <Grid item xs={4} className={classes.gridItem} key={p.name}>
             <Paper elevation={5} className={classes.paper}>
               <Grid container direction="column">
-                <Grid item xs>
+                <Grid item>
                   <div>
                     <img alt="Project" src={p.image} className={classes.image} />
                   </div>
                   <div className={classes.textContainer}>
-                    <Typography variant="h4" className={classes.header}>
+                    <Typography variant="h5" className={classes.header}>
                       <Link href={p.link ? p.link : null} target="_blank" underline="none" color="textPrimary">
                         <Trans i18nKey={p.name} />
                       </Link>
                     </Typography>
-                    <Typography variant="h5" color="secondary" className={classes.subtitle}>
+                    <Typography variant="subtitle1" color="secondary" className={classes.subtitle}>
                       <Trans i18nKey={p.subtitle} />
                     </Typography>
                   </div>
