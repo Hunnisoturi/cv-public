@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { Toolbar, Button, Box, AppBar, Typography, Container, IconButton, Drawer } from '@material-ui/core';
+import { Toolbar, Button, Box, AppBar, Typography, Container, IconButton, Drawer, useMediaQuery } from '@material-ui/core';
 import { Trans, useTranslation } from 'react-i18next';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
 import { HashLink as Link } from 'react-router-hash-link';
+import MenuIcon from '@material-ui/icons/Menu';
 import { Constants } from '../utils/constants';
 import { isFinnish } from '../utils/utils';
-import MenuIcon from '@material-ui/icons/Menu';
 
 import { ReactComponent as Logo } from '../assets/Logo.svg';
 
@@ -39,7 +38,7 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       marginTop: '30px',
-    }
+    },
   },
   button: {
     marginLeft: '12px',
@@ -60,7 +59,7 @@ const styles = makeStyles(theme => ({
   buttonMobile: {
     width: '250px',
     marginBottom: '30px',
-  }
+  },
 }));
 
 const Header = () => {
@@ -91,46 +90,46 @@ const Header = () => {
           </IconButton>
           <Drawer anchor="right" open={open} onClose={handleClose} className={classes.drawer}>
             <Box className={classes.navi} component="nav">
-                <Link smooth to="/#home" className={classes.link}>
-                  <Button className={classes.buttonMobile} onClick={handleClose}>
-                    <Typography component="h6">
-                      <Box fontWeight={700}>
-                        <Trans i18nKey="home" />
-                      </Box>
-                    </Typography>
-                  </Button>
-                </Link>
-                <Link smooth to="/#projects" className={classes.link}>
-                  <Button className={classes.buttonMobile} onClick={handleClose}>
-                    <Typography component="h6">
-                      <Box fontWeight={700}>
-                        <Trans i18nKey="projects" />
-                      </Box>
-                    </Typography>
-                  </Button>
-                </Link>
-                <Link smooth to="/#contact" className={classes.link}>
-                  <Button className={classes.buttonMobile} onClick={handleClose}>
-                    <Typography component="h6">
-                      <Box fontWeight={700}>
-                        <Trans i18nKey="contact" />
-                      </Box>
-                    </Typography>
-                  </Button>
-                </Link>
-                <Button
-                  className={classes.buttonMobile}
-                  onClick={() => {changeLanguage(); handleClose();}}
-                >
+              <Link smooth to="/#home" className={classes.link}>
+                <Button className={classes.buttonMobile} onClick={handleClose}>
                   <Typography component="h6">
                     <Box fontWeight={700}>
-                      <Trans i18nKey="language" />
+                      <Trans i18nKey="home" />
                     </Box>
                   </Typography>
                 </Button>
-              </Box>
+              </Link>
+              <Link smooth to="/#projects" className={classes.link}>
+                <Button className={classes.buttonMobile} onClick={handleClose}>
+                  <Typography component="h6">
+                    <Box fontWeight={700}>
+                      <Trans i18nKey="projects" />
+                    </Box>
+                  </Typography>
+                </Button>
+              </Link>
+              <Link smooth to="/#contact" className={classes.link}>
+                <Button className={classes.buttonMobile} onClick={handleClose}>
+                  <Typography component="h6">
+                    <Box fontWeight={700}>
+                      <Trans i18nKey="contact" />
+                    </Box>
+                  </Typography>
+                </Button>
+              </Link>
+              <Button
+                className={classes.buttonMobile}
+                onClick={() => { changeLanguage(); handleClose(); }}
+              >
+                <Typography component="h6">
+                  <Box fontWeight={700}>
+                    <Trans i18nKey="language" />
+                  </Box>
+                </Typography>
+              </Button>
+            </Box>
           </Drawer>
-        </Toolbar> 
+        </Toolbar>
       </AppBar>
     </Container>
   ) : (
@@ -140,7 +139,7 @@ const Header = () => {
           <Toolbar className={classes.toolbar} disableGutters>
             <Logo height={100} className={classes.logo} />
             <Box className={classes.navi} component="nav">
-              <Link smooth to="/#home" className={classes.link}>
+              <Link smooth to="#home" className={classes.link}>
                 <Button className={classes.button}>
                   <Typography component="h6">
                     <Box fontWeight={700}>

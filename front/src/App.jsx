@@ -8,7 +8,6 @@ import Headline from './components/Headline';
 import About from './components/About';
 import Education from './components/Education';
 import Projects from './components/Projects';
-// import CallToAction from './components/CallToAction';
 import Technologies from './components/Technologies';
 import ArrowDown from './components/ArrowDown';
 import Contact from './components/Contact';
@@ -53,7 +52,7 @@ const styles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       marginTop: '30px',
       justifyContent: 'center',
-    }
+    },
   },
   graphic: {
     width: '100%',
@@ -86,10 +85,6 @@ const styles = makeStyles(theme => ({
     },
     dots: {
       width: '100%',
-      // maxWidth: '562px',
-      // [theme.breakpoints.down('xs')]: {
-      //   height: '180px',
-      // },
     },
   },
 }));
@@ -103,7 +98,8 @@ const App = () => {
         <Container maxWidth="xl" className={classes.mainGrid}>
           <Grid container className={classes.headlineGrid} spacing={3}>
             <Grid
-              item xs
+              item
+              xs
               className={classes.headline}
             >
               <Fade in timeout={1000}>
@@ -113,7 +109,8 @@ const App = () => {
               </Fade>
             </Grid>
             <Grid
-              item xs
+              item
+              xs
               className={classes.graphic}
             >
               <Fade in timeout={1700}>
@@ -121,11 +118,6 @@ const App = () => {
               </Fade>
             </Grid>
           </Grid>
-          {/* <Fade in timeout={1700}>
-            <div>
-              <CallToAction />
-            </div>
-          </Fade> */}
           <About />
           <Divider orientation="horizontal" className={classes.divider} />
           <Education />
