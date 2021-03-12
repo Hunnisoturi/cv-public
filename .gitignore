@@ -15,6 +15,12 @@
 *.env
 *.code-workspace
 
+# Server stuff
+/server
+init-letsencrypt.sh
+options-ssl-nginx.conf
+front/nginx.conf
+
 # production
 /build
 
